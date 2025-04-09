@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <a href="index.html">
+                <img src="assets/img/LogoOrangeText.png" alt="OK Wernigerode Logo Orange" class="logo">
+            </a> 
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <span class="material-symbols-outlined" id="menuIcon">
+                    menu
+                </span>
+            </a>
+        </div>
+        
+        <nav id="navItems">
+            <a href="#" class="active">Home</a>
+            <a href="#">News</a>
+            <a href="#">Contact</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+    
+
+    <main>
+        <section class="welcome">
+            <h1>Willkommen</h1>
+            <p is="dots-divider"></p>
+            <p>
+                Wir repräsentieren Bürgerfernsehen, d.h. interessierte Bürger können hier selbst Filme gestalten, bearbeiten und natürlich senden.
+            </p>
+            <p>
+                Der Offene Kanal Wernigerode ist für alle offen, die in der Region Film und Fernsehen machen wollen.
+            </p>
+            <p>
+                Ob jung, ob alt; einzeln oder in Gruppen; als Verein oder Initiative; als Schüler, Student, Schule oder Universität; Nachwuchsfilmemacher und -journalist.
+            </p>
+            <p>
+                Kurz: für alle, die Freude am „Fernsehmachen“ haben.
+            </p>
+        </section>
+        <section class="news" id="news">
+            <h1>Aktuelles</h1>
+            <p>
+                Hier finden Sie die neuesten Informationen und Nachrichten.
+            </p>
+            <button onclick="readContents()">Contents</button>
+            <input type="file"> 
+
+        </section>
+
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/divider.js"></script>
+    <script src="js/news.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
