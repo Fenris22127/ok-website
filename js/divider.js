@@ -1,6 +1,8 @@
 class Dots extends HTMLParagraphElement {
     constructor() {
         super();
+        console.log("Dots constructor executed"); // Debugging line
+
         // Clear any existing content
         this.textContent = '';
 
@@ -12,13 +14,14 @@ class Dots extends HTMLParagraphElement {
             dot.style.height = '0.3rem';
             dot.style.margin = '0 0.4rem';
             dot.style.backgroundColor = '#000';
-            dot.style.borderRadius = '50%'
+            dot.style.borderRadius = '50%';
             this.appendChild(dot);
         }
 
         // Center the dots
         this.style.textAlign = 'center';
         this.style.display = 'block';
+        //this.style.padding = '10px 0';
     }
 }
 

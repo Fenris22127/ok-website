@@ -1,10 +1,9 @@
-function myFunction() {
+/**
+ * Function to toggle the display of the navigation menu for mobile view.
+ * @returns {void}
+ */
+function menu() {
     var menu = document.getElementById("navItems");
-    // if (x.className === "nav") {
-    //   x.className += " responsive";
-    // } else {
-    //   x.className = "nav";
-    // }
     
     if (menu.style.display === "flex") {
         menu.style.display = "none";
@@ -12,9 +11,4 @@ function myFunction() {
     else {
         menu.style.display = "flex";
     }
-}
-
-function readContents() {
-    
-    
 }
