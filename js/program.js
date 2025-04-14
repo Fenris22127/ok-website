@@ -21,7 +21,7 @@ function loadProgram() {
         description.className = "description"
 
         start.innerHTML = programItems[i].start;
-        end.innerHTML = programItems[i].end;
+        end.innerHTML = "- " + programItems[i].end;
         title.innerHTML = programItems[i].title;
         description.innerHTML = programItems[i].description;
 

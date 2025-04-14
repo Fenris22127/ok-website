@@ -12,9 +12,8 @@
  */
 
 /**
- * Function to load news articles from an external JSON file and display them on the page.
- */
-
+ * Function to load news articles when the page has loaded.
+*/
 document.body.onload = function() {loadNews()};
 
 /**

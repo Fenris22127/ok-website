@@ -4,12 +4,16 @@
     --orange: #ee842e;
     --grey: #e1e1e1;
     --darkgrey: #1e1e1e;
+    --padding_desktop: 5rem;
+    --padding_tablet: 2rem;
+    --padding_mobile: 2rem;
 }
 
 html {
     font-family: 'Montserrat', sans-serif;
     font-size: 120%;
     line-height: 150%;
+    box-sizing: border-box
 }
 
 header {
@@ -31,11 +35,7 @@ h1 {
     text-transform: uppercase;
     border-bottom: 0.15rem solid var(--orange);
     padding-bottom: 0.5rem;
-    margin: 0 5rem;
-}
-
-.wrapper h1 {
-    margin: 0;
+    margin: 2rem var(--padding_desktop);
 }
 
 h2 {
@@ -74,7 +74,11 @@ ul {
 }
 
 .wrapper {
-    padding: 1rem 5rem;
+    padding: 1rem var(--padding_desktop);
+}
+
+.wrapper h1 {
+    margin: 0 0 2rem 0;
 }
 
 .wrapper section {
@@ -155,7 +159,7 @@ nav .icon {
 .highlight p {
     text-align: center;
 }
-/* #endregion: -------- WELCOME SECTION -------- */
+/* #endregion: -------- HIGHLIGHT SECTION -------- */
 
 /* #region: -------- NEWS -------- */
 .news {
@@ -215,7 +219,7 @@ footer {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 1.5fr repeat(4, 1fr);
+    grid-template-columns: 1.5fr repeat(5, 1fr);
     gap: 2rem;
     width: 100%;
 }
@@ -301,6 +305,7 @@ footer a {
 }
 /* #endregion: -------- PROGRAM POINTS -------- */
 
+/* #region: -------- LIVESTREAM -------- */
 .livestream_placeholder {
     background-color: var(--grey);
     width: 60%;
@@ -323,12 +328,13 @@ footer a {
     font-weight: 700;
     color: var(--orange);
 }
+/* #endregion: -------- LIVESTREAM -------- */
 
+/* #region: -------- PROJECTS -------- */
 .projects {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5rem;
-    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
 }
 
 .project {
@@ -337,16 +343,13 @@ footer a {
     gap: 1rem;
     padding: 1rem 1rem;
     background-color: white;
-    margin: 1rem 0;
-    width: 20%;
     align-items: center;
     border-radius: 0.8rem;
-    /* border: 0.15rem solid var(--orange); */
 }
 
 .project img {
     width: 100%;
-    height: 15rem;
+    height: 14rem;
     object-fit: cover;
     border-radius: 0.5rem;
 }
@@ -357,28 +360,171 @@ footer a {
 
 .project .link {
     flex-grow: 1;
+    align-content: end;
 }
 
 .project .link .small {
     margin: 0;
 }
+/* #endregion: -------- PROJECTS -------- */
 
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-    /* #region: ---- MENU ---- */
-    header {
-        height: 4rem;
+/* #region: -------- JOBS -------- */
+.jobsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+.job {
+    display: grid;
+    grid-template-areas:    "title title title"
+                            "duration pay location"
+                            "description description description"
+                            "skills skills skills"
+                            "link link link";
+    grid-template-rows: min-content min-content min-content min-content auto;
+    gap: 0.2rem;
+    padding: 1rem 1rem;
+    background-color: var(--grey);
+    border-radius: 0.8rem;
+    justify-content: center;
+}
+
+.job h3 {
+    grid-area: title;
+    color: var(--orange);
+    margin-bottom: 0.5rem;
+}
+
+.job .details {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.job .details span {
+    padding-top: 0.1rem; /* REVIEW */
+}
+
+.job .duration {
+    grid-area: duration;
+    font-size: 1rem;
+    color: var(--darkgrey);
+}
+
+.job .pay {
+    grid-area: pay;
+    font-size: 1rem;
+    color: var(--darkgrey);
+}
+
+.job .location {
+    grid-area: location;
+    font-size: 1rem;
+    color: var(--darkgrey);
+}
+
+.job .description {
+    grid-area: description;
+    font-size: 1.2rem;
+    color: var(--darkgrey);
+}
+
+.job .skills {
+    grid-area: skills;
+    font-size: 1.2rem;
+    color: var(--darkgrey);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem
+}
+
+.job .skills h4 {
+    margin-top: 0;
+}
+
+.job .link {
+    grid-area: link;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    height: 100%;
+}
+
+.job .link a {
+    text-decoration: none;
+    color: var(--darkgrey);
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--orange);
+    border-radius: 0.5rem;
+}
+/* #endregion: -------- JOBS -------- */
+
+@media only screen and (min-width: 992px) and (max-width: 1600px) {
+    html {
+        font-size: 220%;
     }
-    .logo {
-        height: 3rem;
+
+    h1 {
+        margin: 0 var(--padding_tablet);
+    }
+
+    .wrapper {
+        padding: 1rem var(--padding_tablet);
+    }
+
+    /* #region: ---- MENU ---- */
+    .icon {
+        display: flex;
+        align-items: center;
+    }
+
+    #navItems {
+        display: none;
+    }
+    
+    nav {
+        display: none;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    nav a {
+        width: 100%;
+        padding: 0.5rem 0;
+        text-align: center;
+    }
+
+    nav a.active {
+        background-color: var(--orange);
+        color: white;
+    }
+
+    header {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .menu {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
     /* #endregion: ---- MENU ---- */
 
+    /* #region: ---- HIGHLIGHT SECTION ---- */
+    .highlight {
+        padding: 1rem var(--padding_tablet);
+    }
+    /* #endregion: ---- HIGHLIGHT SECTION ---- */
+    
     /* #region: ---- NEWS ---- */
     .news {
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        padding: 1.5rem 5rem;
+        padding: 1.5rem var(--padding_tablet);
         background-color: var(--grey);
         margin: 1rem 0;
     }
@@ -396,27 +542,74 @@ footer a {
         color: var(--grey);
     }
     /* #endregion: ---- NEWS ---- */
+
+    /* #region: ---- PROJECTS ---- */
+    .projects {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .project img {
+        height: 18rem;
+    }
+    /* #endregion: ---- PROJECTS ---- */
+
+    /* #region: ---- JOBS ---- */
+    .jobsContainer {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .job .details {
+        display: flex;
+        gap: 0.2rem;
+    }
+
+    .job .details span {
+        font-size: 130%;
+    }
+    /* #endregion: ---- JOBS ---- */
+
+    footer {
+        padding: 1rem var(--padding_tablet);
+    }
+
+    .footer-logo {
+        width: 100%;
+    }
 }
   
 @media only screen and (min-width: 768px) and (max-width: 992px) {
     html {
-        font-size: 200%;
+        font-size: 250%;
+    }
+
+    h1 {
+        margin: 0 var(--padding_mobile);
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 120%;
     }
 
     .logo {
-        height: 6rem;
+        height: 4rem;
     }
 
     .wrapper {
-        padding: 1rem 2rem;
+        padding: 1rem var(--padding_mobile);
     }
 
     .highlight {
-        padding: 1rem 2rem;
+        padding: 1rem var(--padding_mobile);
     }
 
-    .news {
-        padding: 1rem 2rem;
+    .small {
+        font-size: 1rem;
     }
 
     /* #region: ---- MENU ---- */
@@ -459,6 +652,10 @@ footer a {
     /* #endregion: ---- MENU ---- */
 
     /* #region: ---- NEWS ---- */
+    .news {
+        padding: 1rem var(--padding_mobile);
+    }
+
     .newsItem {
         flex-direction: column;
         align-items: center;
@@ -471,9 +668,63 @@ footer a {
     }
     /* #endregion: ---- NEWS ---- */
 
-    footer {
-        padding: 1rem 2rem;
+    /* #region: ---- PROJECTS ---- */
+    .projects {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
+
+    .project img {
+        height: 20rem;
+    }
+
+    .project a {
+        font-size: 120%;
+    }
+    /* #endregion: ---- PROJECTS ---- */
+
+    /* #region: ---- JOBS ---- */
+    .jobsContainer {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    
+    .job {
+        grid-template-areas:    "title title"
+                                "duration pay"
+                                "location location"
+                                "description description"
+                                "skills skills"
+                                "link link";
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .job h3 {
+        font-size: 1.5rem;
+        overflow-wrap: break-word;
+        word-wrap: break-word; /* Fallback */
+        word-break: break-word; /* Non-standard */
+    }
+
+    .job .details {
+        gap: 0.2rem;
+    }
+
+    
+    .job .skills p {
+        font-size: 1.2rem;
+    }
+
+    .job .details span {
+        font-size: 130%;
+    }
+    /* #endregion: ---- JOBS ---- */
+
+    footer {
+        padding: 1rem var(--padding_mobile);
+    }
+
     .footer-content {
         display: grid;
         grid-template-columns: 1fr;

@@ -1,7 +1,6 @@
 class Dots extends HTMLParagraphElement {
     constructor() {
         super();
-        console.log("Dots constructor executed"); // Debugging line
 
         // Clear any existing content
         this.textContent = '';
@@ -21,7 +20,6 @@ class Dots extends HTMLParagraphElement {
         // Center the dots
         this.style.textAlign = 'center';
         this.style.display = 'block';
-        //this.style.padding = '10px 0';
     }
 }
 
