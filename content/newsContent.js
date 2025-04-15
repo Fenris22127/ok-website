@@ -1,3 +1,11 @@
+/**
+ * A class representing a news item.
+ * @typedef {Object} News
+ * @property {string} title - The title of the news item.
+ * @property {string} date - The date of the news item.
+ * @property {string} text - The text description of the news item.
+ * @property {string} image - The image URL of the news item.
+ */
 class News {
     constructor(title, date, text, image) {
         this.title = title;
@@ -7,6 +15,10 @@ class News {
     }
 }
 
+/**
+ * An array of news items.
+ * @type {News[]}
+ */
 const news = [
     new News(
         "News 1", 

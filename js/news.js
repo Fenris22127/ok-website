@@ -7,7 +7,7 @@
  * @file news.js
  * @author Elisa Johanna Woelk
  * @version 1.0
- * @date 2025-04-08
+ * @date 2025-04-09
  * @since 1.0
  */
 
@@ -86,13 +86,15 @@ function newsAddText(news, i, newsItem) {
  * @returns {void}
  */
 function newsAddImage(news, i, newsItem) {
+    // Check if an image is available
     if (news[i].image) {
         var img = document.createElement("img");
-        img.src = "../content/img/" + news[i].image;
+        img.src = "../content/img/news/" + news[i].image;
         img.alt = news[i].title;
         img.className = "newsImage";
         newsItem.appendChild(img);
     } else {
+        // If no image is available, create a placeholder with the first two letters of the words of the title
         var str = news[i].title;
         var matches = str.match(/\b(\w)/g);
         var acronym = matches.join('').toUpperCase();

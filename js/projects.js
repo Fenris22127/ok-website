@@ -29,7 +29,7 @@ function loadProjects() {
         var img = document.createElement("img");
         // set img source
         if (projectsContent[i].image != "") {
-            img.setAttribute("src", "../content/img/" + projectsContent[i].image);
+            img.setAttribute("src", "../content/img/projects/" + projectsContent[i].image);
         } else {
             img.setAttribute("src", "../assets/img/ok_placeholder.png");
         }
@@ -53,10 +53,13 @@ function loadProjects() {
         linkContainer.appendChild(more);
         linkContainer.appendChild(link);
 
+        // Add all elements to the project div
         project.appendChild(img);
         project.appendChild(title);
         project.appendChild(description);
         project.appendChild(linkContainer);
+
+        // Add the project div to the container
         container.appendChild(project);
     }
 }

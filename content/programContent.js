@@ -1,3 +1,12 @@
+/**
+ * A class representing a program point.
+ * @typedef {Object} ProgramItem
+ * @property {string} start - The start time of the program point.
+ * @property {string} end - The end time of the program point.
+ * @property {string} title - The title of the program point.
+ * @property {string} description - The description of the program point.
+ * @property {string} link - The link to the program point.
+ */
 class ProgramItem {
     constructor(start, end, title, description, link) {
         this.start = start;
@@ -8,6 +17,10 @@ class ProgramItem {
     }
 }
 
+/**
+ * An array of program items.
+ * @type {ProgramItem[]}
+ */
 const programItems = [
     new ProgramItem(
         "07:00", 

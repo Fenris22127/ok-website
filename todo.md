@@ -1,15 +1,16 @@
 # ToDo
-[ ] Team-Seite
+[x] Team-Seite
 [ ] Guide: How to use
+    [ ] Team Image Illustrated Aspect Ratio Guide
 [ ] Footer
-    [ ] Jobs
-    [ ] Über uns
-    [ ] Nutzungsordnung
-    [ ] Datenschutz
-    [ ]  AGB
-    [ ] Email
-    [ ] Telefon
-    [ ] Anfahrt
-[ ] Ausbildung
-[ ] Livestream
+    [x] Jobs
+    [x] Über uns
+    [x] Nutzungsordnung
+    [ ] Livestream
+    [x] Email
+    [x] Telefon
+    [x] Anfahrt
+[x] Ausbildung
+[ ] Datenschutz
 [x] Instagram hinzufügen
+[ ] Nutzerkartei überarbeiten

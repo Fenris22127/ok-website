@@ -1,3 +1,11 @@
+/**
+ * Class representing a project.
+ * @typedef {Object} Project
+ * @property {string} title - The title of the project.
+ * @property {string} description - The description of the project.
+ * @property {string} link - The link to the project.
+ * @property {string} image - The image URL of the project.
+ */
 class Project {
     constructor(title, description, link, image) {
         this.title = title;
@@ -7,6 +15,10 @@ class Project {
     }
 }
 
+/**
+ * An array of projects.
+ * @type {Project[]}
+ */
 const projectsContent = [
     new Project(
         "Ein Projekt", 

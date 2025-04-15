@@ -44,10 +44,17 @@ function loadJobs() {
         // Adds the coin icon and the job pay
         var jobPay = document.createElement("p");
         jobPay.classList.add("details", "pay");
-        jobPay.innerHTML = `
+        if (jobsContent[i].pay == "") {
+            jobPay.innerHTML = `
             <span class="material-symbols-outlined">paid</span>
-            ${jobsContent[i].pay} 
+            Nicht angegeben
         `;
+        } else {
+            jobPay.innerHTML = `
+                <span class="material-symbols-outlined">paid</span>
+                ${jobsContent[i].pay} 
+            `;
+        }
         
         // Adds the location icon and the job location
         var jobLocation = document.createElement("p");
@@ -94,6 +101,7 @@ function loadJobs() {
         jobLinkButton.innerHTML = "Bewerben";
         jobLink.appendChild(jobLinkButton);
 
+        // Adds the job title, duration, pay, location, description, skills and link to the job container
         jobContainer.appendChild(jobTitle);
         jobContainer.appendChild(jobDuration);
         jobContainer.appendChild(jobPay);
@@ -101,7 +109,8 @@ function loadJobs() {
         jobContainer.appendChild(jobDescription);
         jobContainer.appendChild(jobSkills);
         jobContainer.appendChild(jobLink);
-
+        
+        // Adds the job container to the main container
         container.appendChild(jobContainer);
     }
 }

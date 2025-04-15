@@ -1,3 +1,13 @@
+/**
+ * A class representing a job/apprenticeship offer.
+ * @typedef {Object} Job
+ * @property {string} title - The title of the job.
+ * @property {string} description - The description of the job.
+ * @property {string} duration - The duration of the job.
+ * @property {string} pay - The pay for the job.
+ * @property {string} location - The location of the job.
+ * @property {string} skills - The required skills for the job.
+ */
 class Job {
     constructor(title, description, duration, pay, location, skills) {
         this.title = title;
@@ -9,6 +19,10 @@ class Job {
     }
 }
 
+/**
+ * An array of job offers.
+ * @type {Job[]}
+ */
 const jobsContent = [
     new Job(
         "Mediengestalter für Bild und Ton", 

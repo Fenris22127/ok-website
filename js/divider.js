@@ -1,3 +1,12 @@
+/**
+ * This class creates a custom HTML element that displays three dots as a divider.
+ * 
+ * @file divider.js
+ * @author Elisa Johanna Woelk
+ * @version 1.1
+ * @date 2025-04-8
+ * @since 1.0
+ */
 class Dots extends HTMLParagraphElement {
     constructor() {
         super();
@@ -23,5 +32,7 @@ class Dots extends HTMLParagraphElement {
     }
 }
 
+// Define the custom element with the name 'dots-divider' and associate it with the Dots class
+// The 'extends' option allows it to be used as a <p> element
 customElements.define('dots-divider', Dots, { extends: 'p' });
   
