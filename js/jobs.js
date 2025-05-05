@@ -96,6 +96,7 @@ function loadJobs() {
         var jobLink = document.createElement("div");
         jobLink.className = "link";
         var jobLinkButton = document.createElement("a");
+        jobLinkButton.className = "button";
         var link = jobEmailLink + encodeURIComponent(jobsContent[i].title.trim());
         jobLinkButton.setAttribute("href", link);
         jobLinkButton.innerHTML = "Bewerben";
