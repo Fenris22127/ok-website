@@ -8,7 +8,7 @@
  * @author Elisa Johanna Woelk
  * @version 1.0
  * @date 2025-04-09
- * @since 1.0
+ * @since 1.1
  */
 
 /**
@@ -51,9 +51,9 @@ function loadNews() {
 
 /**
  * Adds the text content to the news item.
- * @param {*} news      An Array containing news items from 
- * @param {*} i         The index of the news item to be added
- * @param {*} newsItem  The news item to which the text will be added
+ * @param {News[]} news             An Array containing news items from 
+ * @param {int} i                   The index of the news item to be added
+ * @param {HTMLDivElement} newsItem The news item to which the text will be added
  * @returns {void}
  */
 function newsAddText(news, i, newsItem) {
@@ -62,7 +62,7 @@ function newsAddText(news, i, newsItem) {
 
     // Add the title
     var newsTitle = document.createElement("h2");
-    newsTitle.innerHTML = news[i].title;
+    newsTitle.innerHTML = checkText(news[i].title);
     newsItemText.appendChild(newsTitle);
 
     // Add the date
@@ -80,9 +80,9 @@ function newsAddText(news, i, newsItem) {
 
 /**
  * Adds the image to the news item. If no image is available, it creates a placeholder with the first two letters of the words of the title.
- * @param {*} news      An Array containing news items from
- * @param {*} i         The index of the news item to be added
- * @param {*} newsItem  The news item to which the image will be added
+ * @param {News[]} news             An Array containing news items
+ * @param {int} i                   The index of the news item to be added
+ * @param {HTMLDivElement} newsItem The news item to which the image will be added
  * @returns {void}
  */
 function newsAddImage(news, i, newsItem) {
@@ -108,5 +108,23 @@ function newsAddImage(news, i, newsItem) {
         imageAlt.appendChild(span);
 
         newsItem.appendChild(imageAlt);
+    }
+}
+
+/**
+ * Checks if the date is a valid format.
+ * If the date is invalid, it returns "??.??.????".
+ * Valid formats are:
+ * 1. DD.MM.YYYY
+ * 2. DD.MM.YY (with or without leading zero)
+ * @param {string} date The date to check.
+ * @returns {string}    The date or "??.??.????" if the date is invalid.
+ */
+function checkDate(date) {
+    // Check if the date is in the format DD.MM.YYYY and correct it if necessary and possible
+    if (date.match(/^\d{1,2}\.\d{1,2}\.(\d{2}|\d{4})$/)) {
+        return date;
+    } else {
+        return "??.??.????";
     }
 }

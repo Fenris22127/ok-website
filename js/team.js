@@ -8,7 +8,7 @@
  * @author Elisa Johanna Woelk
  * @version 1.0
  * @date 2025-04-15
- * @since 1.0
+ * @since 1.1
  */
 
 /**
@@ -26,7 +26,6 @@ document.body.onload = function() {
 function loadBoard() {
     var container = document.getElementById("boardContainer");
     var boardMembers = teamContents.filter(member => member.group === "Vorstand");
-    console.log(boardMembers.length);
     boardMembers.forEach(member => {
         var personDiv = document.createElement("div");
         personDiv.className = "person";
@@ -42,11 +41,11 @@ function loadBoard() {
             personDiv.appendChild(img);
         }
         var name = document.createElement("h3");
-        name.innerHTML = member.name;
+        name.innerHTML = checkText(member.name);
 
         var role = document.createElement("p");
         role.className = "role";
-        role.innerHTML = member.role;
+        role.innerHTML = checkText(member.role);
 
         personDiv.appendChild(name);
         personDiv.appendChild(role);
@@ -56,6 +55,7 @@ function loadBoard() {
 
 /**
  * Loads the team members into the team container.
+ * @returns {void}
  */
 function loadTeam() {
     var container = document.getElementById("teamContainer");

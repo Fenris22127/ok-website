@@ -17,6 +17,7 @@ class TeamMember {
 
 /**
  * An array of team members.
+ * The group property is used to categorize members into "Vorstand" and "Team". Other groups will not be displayed.
  * @type {TeamMember[]}
  */
 const teamContents = [

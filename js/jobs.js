@@ -8,7 +8,7 @@
  * @author Elisa Johanna Woelk
  * @version 1.0
  * @date 2025-04-14
- * @since 1.0
+ * @since 1.1
  */
 
 /**
@@ -118,9 +118,9 @@ function loadJobs() {
 
 /**
  * Splits a string into a list of items and capitalizes the first letter of each item.
- * @param {*} text The string with items separated by commas and spaces.
+ * @param {string} text The string with items separated by commas and spaces.
  * @example "item1, item2, item3"
- * @returns {Array} An array of items with the first letter capitalized.
+ * @returns {string[]}  An array of items with the first letter capitalized.
  * @example ["Item1", "Item2", "Item3"]
  */
 function splitToList(text) {
@@ -133,8 +133,10 @@ function splitToList(text) {
 
 /**
  * Capitalizes the first letter of a string.
- * @param {*} val The string to be capitalized.
- * @returns {string} The string with the first letter capitalized.
+ * @param {string} val  The string to be capitalized.
+ * @example "example"
+ * @returns {string}    The string with the first letter capitalized.
+ * @example "Example"
  */
 function capitalizeFirstLetter(val) {
     return String(val).charAt(0).toUpperCase() + String(val).slice(1);

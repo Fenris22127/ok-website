@@ -35,9 +35,9 @@ function loadProjects() {
         }
         // Set title and description
         var title = document.createElement("h3");
-        title.innerHTML = projectsContent[i].title;
+        title.innerHTML = checkText(projectsContent[i].title);
         var description = document.createElement("p");
-        description.innerHTML = projectsContent[i].description;
+        description.innerHTML = checkText(projectsContent[i].description);
 
         // Set link to project
         var linkContainer = document.createElement("div");
@@ -46,7 +46,7 @@ function loadProjects() {
         more.className = "small";
         more.innerHTML = "Alle Informationen zu diesem Projekt finden Sie unter:";
         var link = document.createElement("a");
-        link.setAttribute("href", projectsContent[i].link);
+        link.setAttribute("href", checkLink(projectsContent[i].link));
         link.setAttribute("target", "_blank"); // Open link in new tab
         link.setAttribute("rel", "noopener noreferrer"); // Security measure for new tab
         link.innerHTML = projectsContent[i].link;

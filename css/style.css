@@ -221,6 +221,7 @@ nav .icon {
     align-items: center;
     font-size: 8rem;
     color: var(--grey);
+    line-height: normal;
 }
 
 .newsItemText {
