@@ -231,6 +231,148 @@ nav .icon {
 }
 /* #endregion: -------- NEWS -------- */
 
+/* #region: -------- SLIDER -------- */
+.slider {
+    margin: 1rem 0;
+}
+
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    max-width: 50rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.slideshow-container img {
+    vertical-align: middle;
+    height: 100%;
+    background-position: center;
+}
+
+.slides {
+    display: none;
+    height: 30rem;
+    text-align: center;
+    background-color: var(--grey);
+    justify-content: center;
+}
+
+.slideshow-container .prev, .slideshow-container .next {
+    position: absolute;
+    top: 50%;
+    padding: 1rem;
+    margin-top: -1.5rem;
+    width: auto;
+
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 0 0.2rem 0.2rem 0;
+    color: var(--darkgrey);
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.slideshow-container .next {
+    right: 0;
+    border-radius: 0.2rem 0 0 0.2rem;
+}
+
+.slideshow-container .prev:hover, .slideshow-container .next:hover {
+    color: var(--grey);
+    background-color: rgba(0,0,0,0.8);
+}
+
+.slideshow-container .text {
+    position: absolute;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    text-align: center;
+    align-self: end;
+    color: var(--grey);
+    background: rgba(0, 0, 0, 0);
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0.5) 90%, rgba(0, 0, 0, 0) 100%);
+}
+
+.slideshow-container .slideNumber {
+    position: absolute;
+    top: 0;
+    padding: 0.5rem 1rem;
+    color: var(--grey);
+}
+
+.slider .dot {
+    margin: 0.5rem;
+    cursor: pointer;
+    height: 1rem;
+    aspect-ratio: 1 / 1;
+    background-color: var(--midgrey);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.mobile_button {
+    display: none;
+}
+
+.slider .active, .slider .dot:hover {
+  background-color: var(--orange);
+}
+
+.slideshow-container .fade {
+  animation-name: fade;
+  animation-duration: 0.2s;
+}
+
+.slider_dots {
+    display: grid;
+    grid-template-areas: "prev dots next";
+}
+
+.slider_dots .dots-container {
+    grid-area: dots;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.slider_dots .prev {
+    grid-area: prev;
+    justify-self: start;
+}
+.slider_dots .next {
+    grid-area: next;
+    justify-self: end;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+/* #endregion: -------- SLIDER -------- */
+
+/* #region: -------- SPONSORS -------- */
+.sponsors {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3rem;
+    margin: 2rem 0;
+}
+
+.sponsor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sponsors img {
+    max-height: 5rem;
+    object-fit: contain;
+}
+/* #endregion: -------- SPONSORS -------- */
+
 /* #region: -------- FOOTER -------- */
 footer {
     display: flex;
@@ -417,6 +559,7 @@ footer a {
                             "skills skills skills"
                             "link link link";
     grid-template-rows: min-content min-content min-content min-content auto;
+    grid-template-columns: 25% 1fr 1fr;
     gap: 0.2rem;
     padding: 1rem 1rem;
     background-color: var(--grey);
@@ -634,6 +777,27 @@ footer a {
     }
     /* #endregion: ---- MENU ---- */
 
+    /* #region: ---- SLIDER ---- */
+    .slideshow-container {
+        max-width: 100%;
+    }
+
+    .desktop_button {
+        display: none;
+    }
+
+    .mobile_button {
+        display: block;
+    }
+
+    .slider_dots .mobile_button {
+        cursor: pointer;
+        background-color: var(--grey);
+        padding: 1rem 2rem;
+        font-size: 2rem;
+    }
+    /* #endregion: ---- SLIDER ---- */
+
     /* #region: ---- HIGHLIGHT SECTION ---- */
     .highlight {
         padding: 1rem var(--padding_tablet);
@@ -800,6 +964,35 @@ footer a {
         justify-content: space-between;
     }
     /* #endregion: ---- MENU ---- */
+
+    /* #region: ---- SLIDER ---- */
+    .slideshow-container {
+        max-width: 100%;
+    }
+    .slides {
+        height: auto;
+    }
+    .slides img {
+        width: 100%;
+        height: auto;
+    }
+    .desktop_button {
+        display: none;
+    }
+
+    .mobile_button {
+        display: block;
+        font-size: 2rem;
+    }
+
+    .slider_dots {
+        line-height: normal;
+    }
+
+    .slider_dots .dots-container {
+        gap: 0.2rem;
+    }
+    /* #endregion: ---- SLIDER ---- */
 
     /* #region: ---- NEWS ---- */
     .news {

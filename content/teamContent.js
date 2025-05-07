@@ -81,4 +81,11 @@ const teamContents = [
         "",
         "Team"
     ),
+    //DELETE: For testing purposes only
+    new TeamMember(
+        "", 
+        "",
+        "",
+        "Team"
+    ),
 ]

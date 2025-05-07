@@ -67,12 +67,12 @@ function newsAddText(news, i, newsItem) {
 
     // Add the date
     var newsDate = document.createElement("p");
-    newsDate.innerHTML = news[i].date;
+    newsDate.innerHTML = checkDate(news[i].date);
     newsItemText.appendChild(newsDate);
 
     // Add the text
     var newsText = document.createElement("p");
-    newsText.innerHTML = news[i].text;
+    newsText.innerHTML = checkText(news[i].text);
     newsItemText.appendChild(newsText);
 
     newsItem.appendChild(newsItemText);
@@ -95,8 +95,11 @@ function newsAddImage(news, i, newsItem) {
         newsItem.appendChild(img);
     } else {
         // If no image is available, create a placeholder with the first two letters of the words of the title
-        var str = news[i].title;
+        var str = checkText(news[i].title);
         var matches = str.match(/\b(\w)/g);
+        if (matches === null) {
+            matches = ["?"];
+        }
         var acronym = matches.join('').toUpperCase();
         acronym = acronym.substring(0, 2);
 

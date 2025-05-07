@@ -48,4 +48,13 @@ const jobsContent = [
         "OK Wernigerode",
         ""
     ),
+    //DELETE: For testing purposes only
+    new Job(
+        "", 
+        "",
+        "", 
+        "",
+        "",
+        ""
+    ),
 ]

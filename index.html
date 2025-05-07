@@ -53,6 +53,32 @@
             <h2>Aktuelles</h2>
             <!-- News will be dynamically inserted here by JavaScript -->
         </section>
+        <section class="wrapper">
+            <h2>Einblicke in den Offenen Kanal Wernigerode</h2>
+            <div class="slider">
+                <div class="slideshow-container" id="slideshow-container">
+                    <!-- Images will be dynamically inserted here by JavaScript -->
+                    <a class="prev desktop_button" onclick="plusSlides(-1)">&#11164;</a>
+                    <a class="next desktop_button" onclick="plusSlides(1)">&#11166;</a>
+                    
+                </div>
+                <div class="slider_dots">
+                    <a class="prev mobile_button" onclick="plusSlides(-1)">&#11164;</a>
+                    <a class="next mobile_button" onclick="plusSlides(1)">&#11166;</a>
+                    <div class="dots-container" id="dots-container"></div>
+                    <!-- Dots will be dynamically inserted here by JavaScript -->
+                </div>
+            </div>
+        </section>
+        <p is="dots-divider"></p>
+        <section class="wrapper">
+            <h2>Unsere Partner</h2>
+            <p>Der Offene Kanal Wernigerode wird unterstützt durch:</p>
+            
+            <div class="sponsors" id="sponsors">
+                <!-- Sponsors will be dynamically inserted here by JavaScript -->
+            </div>
+        </section>
     </main>
     <footer>
         <div class="footer-content">
@@ -106,8 +132,12 @@
         <p>&copy; 2025 Offener Kanal Wernigerode | Alle Rechte vorbehalten</p>
     </footer>
     <script src="js/divider.js"></script>
-    <script src="js/menu.js"></script>
     <script src="js/utility.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="content/sponsorsContent.js"></script>
+    <script src="js/sponsors.js"></script>
+    <script src="content/imagesContent.js"></script>
+    <script src="js/slider.js"></script>
     <script src="content/newsContent.js"></script>
     <script src="js/news.js"></script>
 </body>

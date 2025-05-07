@@ -127,4 +127,12 @@ const programItems = [
         "Abschluss des Tages mit Filmprojekten, die besondere Unterstützung erhalten haben.",
         "https://www.example.com"
     ),
+    //DELETE: For testing purposes only
+    new ProgramItem(
+        "", 
+        "", 
+        "", 
+        "",
+        ""
+    ),
 ]

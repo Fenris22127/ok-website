@@ -32,4 +32,11 @@ const news = [
         "Lorem ipsum dolor sit amet consectetur adipiscing elit.", 
         ""
     ),
+    //DELETE: For testing purposes only
+    new News(
+        "", 
+        "", 
+        "", 
+        ""
+    ),
 ]

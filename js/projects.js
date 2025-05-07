@@ -49,7 +49,7 @@ function loadProjects() {
         link.setAttribute("href", checkLink(projectsContent[i].link));
         link.setAttribute("target", "_blank"); // Open link in new tab
         link.setAttribute("rel", "noopener noreferrer"); // Security measure for new tab
-        link.innerHTML = projectsContent[i].link;
+        link.innerHTML = checkText(projectsContent[i].link);
         linkContainer.appendChild(more);
         linkContainer.appendChild(link);
 

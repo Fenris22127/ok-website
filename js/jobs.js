@@ -31,14 +31,14 @@ function loadJobs() {
 
         // Adds the job title
         var jobTitle = document.createElement("h3");
-        jobTitle.innerHTML = jobsContent[i].title;
+        jobTitle.innerHTML = checkText(jobsContent[i].title);
 
         // Adds the hourglass icon and the job duration
         var jobDuration = document.createElement("p");
         jobDuration.classList.add("details", "duration");
         jobDuration.innerHTML = `
             <span class="material-symbols-outlined">hourglass_empty</span>
-            ${jobsContent[i].duration} 
+            ${checkText(jobsContent[i].duration)} 
             `;
         
         // Adds the coin icon and the job pay
@@ -61,13 +61,13 @@ function loadJobs() {
         jobLocation.classList.add("details", "location");
         jobLocation.innerHTML = `
             <span class="material-symbols-outlined">location_on</span>
-            ${jobsContent[i].location} 
+            ${checkText(jobsContent[i].location)} 
         `;
 
         // Adds the description of the job
         var jobDescription = document.createElement("p");
         jobDescription.className = "description";
-        jobDescription.innerHTML = jobsContent[i].description;
+        jobDescription.innerHTML = checkText(jobsContent[i].description);
 
         var jobSkills = document.createElement("div");
         jobSkills.className = "skills";

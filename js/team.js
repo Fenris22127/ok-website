@@ -8,7 +8,7 @@
  * @author Elisa Johanna Woelk
  * @version 1.0
  * @date 2025-04-15
- * @since 1.1
+ * @since 1.2
  */
 
 /**
@@ -71,15 +71,15 @@ function loadTeam() {
         } else {
             var img = document.createElement("img");
             img.src = "../content/img/team/person_placeholder.svg";
-            img.alt = member.name;
+            img.alt = checkText(member.name);
             personDiv.appendChild(img);
         }
         var name = document.createElement("h3");
-        name.innerHTML = member.name;
+        name.innerHTML = checkText(member.name);
 
         var role = document.createElement("p");
         role.className = "role";
-        role.innerHTML = member.role;
+        role.innerHTML = checkText(member.role);
 
         personDiv.appendChild(name);
         personDiv.appendChild(role);

@@ -44,4 +44,11 @@ const projectsContent = [
         "www.other-example.com", 
         "film_placeholder.jpg"
     ),
+    //DELETE: For testing purposes only
+    new Project(
+        "", 
+        "", 
+        "", 
+        ""
+    ),
 ]
