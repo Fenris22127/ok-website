@@ -9,8 +9,8 @@ function checkText(text) {
     if (text == "") {
         return "??";
     }
-    //if the text is not empty, return the text
-    return text;
+    //if the text is not empty, return the text but remove leading and trailing whitespace
+    return text.trim();
 }
 
 /**

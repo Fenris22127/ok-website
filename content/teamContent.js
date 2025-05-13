@@ -22,69 +22,69 @@ class TeamMember {
  */
 const teamContents = [
     new TeamMember(
-        "Vorname Nachname", 
-        "Vorsitzende",
-        "",
-        "Vorstand"
-    ),
-    new TeamMember(
-        "Vorname Nachname", 
-        "Stellvertreter",
-        "",
-        "Vorstand"
-    ),
-    new TeamMember(
-        "Vorname Nachname", 
-        "Schatzmeister",
-        "",
-        "Vorstand"
-    ),
-    new TeamMember(
-        "Vorname Nachname", 
-        "Schriftführer",
-        "",
-        "Vorstand"
-    ),
-    new TeamMember(
-        "Vorname Nachname", 
+        "Petra Zaretzke", 
         "Geschäftsführung",
         "",
-        "Team"
+        "Vorstand"
     ),
     new TeamMember(
-        "Vorname Nachname", 
+        "Sebastian Hösel", 
         "Technik/Ausbildung",
         "",
-        "Team"
+        "Vorstand"
     ),
     new TeamMember(
-        "Vorname Nachname", 
-        "Projekt 1",
+        "Guido Reuter", 
+        "Projektmitarbeiter",
+        "",
+        "Vorstand"
+    ),
+    new TeamMember(
+        "Brave", 
+        "Geschäftshund/Chef",
+        "",
+        "Vorstand"
+    ),
+
+    new TeamMember(
+        "Noah Helbig", 
+        "Bundesfreiwilligendienst",
         "",
         "Team"
     ),
     new TeamMember(
-        "Vorname Nachname", 
-        "Projekt 2",
+        "Sophie Rumyantseva", 
+        "Bundesfreiwilligendienst",
         "",
         "Team"
     ),
     new TeamMember(
-        "Vorname Nachname", 
-        "Auszubildende",
+        "Jenny Spannaus", 
+        "Bundesfreiwilligendienst",
         "",
         "Team"
     ),
     new TeamMember(
-        "Vorname Nachname", 
+        "Leon Hauch", 
+        "Bundesfreiwilligendienst",
+        "",
+        "Team"
+    ),
+    new TeamMember(
+        "Colin Weicht", 
+        "Einstiegsqualifizierungsjahr",
+        "",
+        "Team"
+    ),
+    new TeamMember(
+        "Greta Dehnbostel", 
         "Praktikant",
         "",
         "Team"
     ),
-    //DELETE: For testing purposes only
     new TeamMember(
-        "", 
-        "",
+        "Elisa Johanna Woelk", 
+        "Praktikant",
         "",
         "Team"
     ),

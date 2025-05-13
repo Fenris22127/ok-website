@@ -627,7 +627,6 @@ footer a {
     height: 100%;
 }
 
-/* FIX: On hover issue */
 .job .link a {
     text-decoration: none;
     color: var(--darkgrey);
@@ -637,6 +636,10 @@ footer a {
     padding: 0.5rem 1rem;
     background-color: var(--orange);
     border-radius: 0.5rem;
+}
+
+.job .link a:hover {
+    color: var(--grey);
 }
 /* #endregion: -------- JOBS -------- */
 
@@ -887,6 +890,19 @@ footer a {
     }
     /* #endregion: ---- 404 ---- */
 
+    /* #region: ---- SPONSORS ---- */
+    .sponsors {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin: 2rem 0;
+    }
+
+    .sponsors img {
+        max-width: 100%;
+    }
+    /* #endregion: ---- SPONSORS ---- */
+
     .team {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1003,6 +1019,9 @@ footer a {
         flex-direction: column;
         align-items: center;
     }
+    .newsItemText {
+        width: 100%;
+    }
     .newsItem img {
         width: 20rem;
         height: 20rem;
@@ -1118,6 +1137,18 @@ footer a {
         margin: 0.5rem 0;
     }
     /* #endregion: ---- 404 ---- */
+
+    /* #region: ---- SPONSORS ---- */
+    .sponsors {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .sponsors img {
+        max-width: 100%;
+    }
+    /* #endregion: ---- SPONSORS ---- */
 
     .team {
         grid-template-columns: repeat(1, 1fr);

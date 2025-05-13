@@ -60,6 +60,7 @@ function loadBoard() {
 function loadTeam() {
     var container = document.getElementById("teamContainer");
     var teamMembers = teamContents.filter(member => member.group === "Team");
+    teamMembers = sortTeamMembers(teamMembers)    
     teamMembers.forEach(member => {
         var personDiv = document.createElement("div");
         personDiv.className = "person";
@@ -85,4 +86,22 @@ function loadTeam() {
         personDiv.appendChild(role);
         container.appendChild(personDiv);
     });
+}
+
+/**
+ * Sorts the given array of team members first according to their role and then according to their names.
+ * @param {TeamMember[]} teamMembers The array with team members to sort
+ * @returns The sorted array of team members
+ */
+function sortTeamMembers(teamMembers) {
+    teamMembers.sort((a, b) => {
+        if (a.role < b.role) return -1;
+        if (a.role > b.role) return 1;
+
+        if (a.name < b.name) return -1;
+        if (a.name > b.name) return 1;
+
+        return 0
+    })
+    return teamMembers
 }

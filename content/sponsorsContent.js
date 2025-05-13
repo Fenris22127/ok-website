@@ -43,10 +43,9 @@ var sponsorsContent = [
     "Stadtwerke.png",
     "https://www.stadtwerke-wernigerode.de"
   ),
-  //DELETE: For testing purposes only
   new Sponsor(
-    "",
-    "",
-    ""
+    "Medienanstalt Sachsen-Anhalt",
+    "MSA.jpg",
+    "https://medienanstalt-sachsen-anhalt.de"
   ),
 ];
