@@ -21,7 +21,7 @@ class Dots extends HTMLParagraphElement {
             dot.style.width = '0.3rem';
             dot.style.height = '0.3rem';
             dot.style.margin = '0 0.4rem';
-            dot.style.backgroundColor = '#000';
+            dot.style.backgroundColor = 'var(--text)';
             dot.style.borderRadius = '50%';
             this.appendChild(dot);
         }

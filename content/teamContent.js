@@ -22,30 +22,54 @@ class TeamMember {
  */
 const teamContents = [
     new TeamMember(
-        "Petra Zaretzke", 
-        "Geschäftsführung",
+        "Sabine Bauer", 
+        "Vorsitzende",
+        "",
+        "Vorstand"
+    ),
+    new TeamMember(
+        "Andreas Heinrich", 
+        "Stellvertreter",
+        "",
+        "Vorstand"
+    ),
+    new TeamMember(
+        "Wolfgang Stürzebecher", 
+        "Schatzmeister",
         "",
         "Vorstand"
     ),
     new TeamMember(
         "Sebastian Hösel", 
-        "Technik/Ausbildung",
+        "Schriftführer",
         "",
         "Vorstand"
+    ),
+    
+    new TeamMember(
+        "Petra Zaretzke", 
+        "Geschäftsführung",
+        "",
+        "Team"
+    ),
+    new TeamMember(
+        "Sebastian Hösel", 
+        "Technik/Ausbildung",
+        "",
+        "Team"
     ),
     new TeamMember(
         "Guido Reuter", 
         "Projektmitarbeiter",
         "",
-        "Vorstand"
+        "Team"
     ),
     new TeamMember(
         "Brave", 
         "Geschäftshund/Chef",
         "",
-        "Vorstand"
+        "Team"
     ),
-
     new TeamMember(
         "Noah Helbig", 
         "Bundesfreiwilligendienst",
@@ -61,7 +85,7 @@ const teamContents = [
     new TeamMember(
         "Jenny Spannaus", 
         "Bundesfreiwilligendienst",
-        "",
+        "Jenny.JPG",
         "Team"
     ),
     new TeamMember(

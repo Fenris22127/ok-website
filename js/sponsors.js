@@ -24,7 +24,6 @@ loadSponsors();
 function loadSponsors() {
     var container = document.getElementById("sponsors");
     var sponsors = sponsorsContent.sort((a, b) => a.name.localeCompare(b.name));
-    console.log(sponsors);
     for (var i = 0; i < sponsorsContent.length; i++) {
         createSponsor(container, sponsorsContent[i]);
     }

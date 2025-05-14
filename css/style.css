@@ -2,9 +2,11 @@
 
 :root {
     --orange: #ee842e; /* FF7500 */
-    --grey: #e1e1e1;
-    --darkgrey: #1e1e1e;
-    --midgrey: #595959;
+    --background: #ffffff;
+    --secondary: #e1e1e1;
+    --text: #1e1e1e;
+    --text-body: #000000;
+    --text-secondary: #595959;
     --padding_desktop: 5rem;
     --padding_tablet: 2rem;
     --padding_mobile: 2rem;
@@ -14,13 +16,15 @@ html {
     font-family: 'Montserrat', sans-serif;
     font-size: 120%;
     line-height: 150%;
-    box-sizing: border-box
+    box-sizing: border-box;
+    background-color: var(--background);
+    color: var(--text);
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    background-color: var(--grey);
+    background-color: var(--secondary);
     height: 6rem;
     padding: 1rem;
 }
@@ -28,7 +32,7 @@ header {
 h1 {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--darkgrey);
+    color: var(--text);
     text-transform: uppercase;
     border-bottom: 0.15rem solid var(--orange);
     padding-bottom: 0.5rem;
@@ -61,14 +65,14 @@ p {
 hr {
     border: 0;
     height: 0.1rem;
-    background-color: var(--grey);
+    background-color: var(--secondary);
     margin: 1rem 0;
     width: 100%;
 }
 
 a {
     text-decoration: none;
-    color: var(--darkgrey);
+    color: var(--text);
 }
 
 a:hover {
@@ -112,12 +116,12 @@ ul, ol {
 }
 
 a.orange:hover {
-    color: var(--darkgrey)
+    color: var(--text)
 }
 
 .button {
     text-decoration: none;
-    color: var(--darkgrey);
+    color: var(--text);
     text-transform: uppercase;
     font-weight: 500;
     text-align: center;
@@ -136,7 +140,7 @@ header nav {
 
 nav a {
     text-decoration: none;
-    color: var(--darkgrey);
+    color: var(--text);
     margin: 0 1rem;
     font-size: 1.3rem;
 }
@@ -161,7 +165,7 @@ nav .icon {
 
 #menuIcon {
     font-size: 2.5rem;
-    color: var(--darkgrey);
+    color: var(--text);
 }
 /* #endregion: -------- NAVIGATION -------- */
 
@@ -188,7 +192,7 @@ nav .icon {
     flex-direction: column;
     gap: 1rem;
     padding: 1.5rem 12rem;
-    background-color: var(--grey);
+    background-color: var(--secondary);
     margin: 1rem 0;
 }
 
@@ -220,7 +224,7 @@ nav .icon {
     justify-content: center;
     align-items: center;
     font-size: 8rem;
-    color: var(--grey);
+    color: var(--secondary);
     line-height: normal;
 }
 
@@ -254,7 +258,7 @@ nav .icon {
     display: none;
     height: 30rem;
     text-align: center;
-    background-color: var(--grey);
+    background-color: var(--secondary);
     justify-content: center;
 }
 
@@ -268,7 +272,7 @@ nav .icon {
     font-weight: bold;
     font-size: 1rem;
     border-radius: 0 0.2rem 0.2rem 0;
-    color: var(--darkgrey);
+    color: var(--text);
     transition: 0.2s ease;
     cursor: pointer;
 }
@@ -279,7 +283,7 @@ nav .icon {
 }
 
 .slideshow-container .prev:hover, .slideshow-container .next:hover {
-    color: var(--grey);
+    color: var(--secondary);
     background-color: rgba(0,0,0,0.8);
 }
 
@@ -289,7 +293,7 @@ nav .icon {
     width: 100%;
     text-align: center;
     align-self: end;
-    color: var(--grey);
+    color: #e1e1e1;
     background: rgba(0, 0, 0, 0);
     background: linear-gradient(90deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0.5) 90%, rgba(0, 0, 0, 0) 100%);
 }
@@ -298,7 +302,7 @@ nav .icon {
     position: absolute;
     top: 0;
     padding: 0.5rem 1rem;
-    color: var(--grey);
+    color: var(--secondary);
 }
 
 .slider .dot {
@@ -306,7 +310,7 @@ nav .icon {
     cursor: pointer;
     height: 1rem;
     aspect-ratio: 1 / 1;
-    background-color: var(--midgrey);
+    background-color: var(--text-secondary);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
@@ -381,7 +385,7 @@ footer {
     padding: 1rem 5rem;
     flex-direction: column;
     gap: 1rem;
-    border-top: 0.1rem solid var(--grey);
+    border-top: 0.1rem solid var(--secondary);
 }
 
 .footer-content {
@@ -403,7 +407,7 @@ footer {
 
 footer a {
     text-decoration: none;
-    color: var(--darkgrey);
+    color: var(--text);
 }
 
 .contactItem {
@@ -425,6 +429,28 @@ footer a {
     height: 2rem;
     object-fit: cover;
     border-radius: 0.5rem;
+}
+
+.color-mode {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.color-mode button {
+    padding: 0;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.1rem 0.15rem 0.15rem;
+    border: var(--orange) solid 0.15rem;
+    border-radius: 0.3rem;
+    background-color: var(--background);
+    color: var(--text);
+    cursor: pointer;
 }
 /* #endregion: -------- FOOTER -------- */
 
@@ -456,7 +482,7 @@ footer a {
 }
 
 .program_point_grid:hover {
-    background-color: var(--grey);
+    background-color: var(--secondary);
     border-radius: 0.5rem;
 }
 
@@ -470,7 +496,7 @@ footer a {
 .program_point_grid .end {
     grid-area: end;
     font-size: 1.2rem;
-    color: var(--darkgrey);
+    color: var(--text);
     width: 100%;
     text-align: right;
 }
@@ -478,13 +504,13 @@ footer a {
 .program_point_grid .title {
     grid-area: title;
     font-size: 1.5rem;
-    color: var(--darkgrey);
+    color: var(--text);
 }
 /* #endregion: -------- PROGRAM POINTS -------- */
 
 /* #region: -------- LIVESTREAM -------- */
 .livestream_placeholder {
-    background-color: var(--grey);
+    background-color: var(--secondary);
     width: 60%;
     height: 30rem;
     margin: auto;
@@ -497,7 +523,7 @@ footer a {
 .livestream_placeholder p {
     text-align: center;
     font-size: 2rem;
-    color: var(--darkgrey);
+    color: var(--text);
     padding: 1rem;
 }
 
@@ -562,7 +588,7 @@ footer a {
     grid-template-columns: 25% 1fr 1fr;
     gap: 0.2rem;
     padding: 1rem 1rem;
-    background-color: var(--grey);
+    background-color: var(--secondary);
     border-radius: 0.8rem;
     justify-content: center;
 }
@@ -585,31 +611,31 @@ footer a {
 .job .duration {
     grid-area: duration;
     font-size: 1rem;
-    color: var(--darkgrey);
+    color: var(--text);
 }
 
 .job .pay {
     grid-area: pay;
     font-size: 1rem;
-    color: var(--darkgrey);
+    color: var(--text);
 }
 
 .job .location {
     grid-area: location;
     font-size: 1rem;
-    color: var(--darkgrey);
+    color: var(--text);
 }
 
 .job .description {
     grid-area: description;
     font-size: 1.2rem;
-    color: var(--darkgrey);
+    color: var(--text);
 }
 
 .job .skills {
     grid-area: skills;
     font-size: 1.2rem;
-    color: var(--darkgrey);
+    color: var(--text);
     display: flex;
     flex-direction: column;
     gap: 0.5rem
@@ -629,7 +655,7 @@ footer a {
 
 .job .link a {
     text-decoration: none;
-    color: var(--darkgrey);
+    color: var(--text);
     text-transform: uppercase;
     font-weight: 500;
     text-align: center;
@@ -639,7 +665,7 @@ footer a {
 }
 
 .job .link a:hover {
-    color: var(--grey);
+    color: var(--secondary);
 }
 /* #endregion: -------- JOBS -------- */
 
@@ -663,15 +689,15 @@ footer a {
 .person img {
     width: 80%;
     border-radius: 50%;
-    border: 0.1rem solid var(--grey);
-    background-color: var(--grey);
+    border: 0.1rem solid var(--secondary);
+    background-color: var(--secondary);
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
 
 .role {
     font-size: 1.2rem;
-    color: var(--midgrey);
+    color: var(--text-secondary);
 }
 
 /* #endregion: -------- TEAM -------- */
@@ -700,7 +726,7 @@ footer a {
     font-size: 1.7rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: var(--midgrey);
+    color: var(--text-secondary);
     margin-bottom: 2rem;
 }
 
@@ -712,7 +738,7 @@ footer a {
 }
 
 .buttons_404 .report {
-    background-color: var(--grey);
+    background-color: var(--secondary);
 }
 /* #endregion: -------- 404 -------- */
 
@@ -795,7 +821,7 @@ footer a {
 
     .slider_dots .mobile_button {
         cursor: pointer;
-        background-color: var(--grey);
+        background-color: var(--secondary);
         padding: 1rem 2rem;
         font-size: 2rem;
     }
@@ -813,7 +839,7 @@ footer a {
         flex-direction: column;
         gap: 1rem;
         padding: 1.5rem var(--padding_tablet);
-        background-color: var(--grey);
+        background-color: var(--secondary);
         margin: 1rem 0;
     }
     .newsItem img {
@@ -827,7 +853,7 @@ footer a {
         width: 10rem;
         height: 10rem;
         font-size: 5rem;
-        color: var(--grey);
+        color: var(--secondary);
     }
     /* #endregion: ---- NEWS ---- */
 

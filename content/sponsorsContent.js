@@ -30,7 +30,7 @@ var sponsorsContent = [
   ),
   new Sponsor(
     "Stadt Wernigerode",
-    "Stadt_Wernigerode.png",
+    "Stadt_Wernigerode.PNG",
     "https://www.wernigerode.de"
   ),
   new Sponsor(

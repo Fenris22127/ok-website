@@ -66,7 +66,7 @@ function loadTeam() {
         personDiv.className = "person";
         if (member.image != "") {
             var img = document.createElement("img");
-            img.src = member.image;
+            img.src = "../content/img/team/" + member.image;
             img.alt = member.name;
             personDiv.appendChild(img);
         } else {
