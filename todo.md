@@ -15,6 +15,6 @@
 [ ] Nutzerkartei überarbeiten
 [ ] 404 testen
 [ ] Team-Fotos hinzufügen
-[ ] Guide: How to use
-    [ ] Team Image Illustrated Aspect Ratio Guide
-[ ] Darkmode?
+[x] Guide: How to use
+    [x] Team Image Illustrated Aspect Ratio Guide
+[x] Darkmode?

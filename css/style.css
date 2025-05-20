@@ -439,6 +439,14 @@ footer a {
     align-items: end;
 }
 
+.color-mode.top {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .color-mode button {
     padding: 0;
     aspect-ratio: 1 / 1;
@@ -902,6 +910,19 @@ footer a {
         padding-top: 0.1rem;
         font-size: 1.5rem;
     }
+
+    .color-mode {
+        height: 3rem;
+        justify-content: center;
+    }
+
+    .color-mode button {
+        border-radius: 0.5rem;
+    }
+
+    .material-symbols-outlined.color-mode-icon {
+        font-size: 2rem;
+    }
     /* #endregion: ---- FOOTER ---- */
 
     /* #region: ---- 404 ---- */
@@ -1084,6 +1105,7 @@ footer a {
                                 "description description"
                                 "skills skills"
                                 "link link";
+        grid-template-columns: 1fr 1fr;
         width: 100%;
         box-sizing: border-box;
     }
@@ -1138,6 +1160,19 @@ footer a {
     .contactItem span {
         padding-top: 0.1rem;
         font-size: 1.5rem;
+    }
+
+    .color-mode {
+        height: 3rem;
+        justify-content: center;
+    }
+
+    .color-mode button {
+        border-radius: 0.5rem;
+    }
+
+    .material-symbols-outlined.color-mode-icon {
+        font-size: 2rem;
     }
     /* #endregion: ---- FOOTER ---- */
 
