@@ -19,6 +19,7 @@ html {
     box-sizing: border-box;
     background-color: var(--background);
     color: var(--text);
+    overflow-x: hidden;
 }
 
 header {
@@ -37,6 +38,10 @@ h1 {
     border-bottom: 0.15rem solid var(--orange);
     padding-bottom: 0.5rem;
     margin: 2rem var(--padding_desktop) 2rem;
+    max-width: 100vw;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow-wrap: break-word; /* Fallback */
 }
 
 h2 {
@@ -47,6 +52,7 @@ h2 {
 h3 {
     font-size: 1.2rem;
     font-weight: 500;
+    
 }
 
 h4 {
@@ -445,6 +451,7 @@ footer a {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 0.2rem;
 }
 
 .color-mode button {
@@ -517,27 +524,23 @@ footer a {
 /* #endregion: -------- PROGRAM POINTS -------- */
 
 /* #region: -------- LIVESTREAM -------- */
-.livestream_placeholder {
+.livestream {
     background-color: var(--secondary);
-    width: 60%;
-    height: 30rem;
+    /* width: 60%; */
+    /* height: 30rem; */
+    width: 100%;
+    aspect-ratio: 16 / 9;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
-.livestream_placeholder p {
-    text-align: center;
-    font-size: 2rem;
-    color: var(--text);
-    padding: 1rem;
-}
-
-.livestream_placeholder p span {
-    font-weight: 700;
-    color: var(--orange);
+#idIframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 /* #endregion: -------- LIVESTREAM -------- */
 
@@ -587,13 +590,13 @@ footer a {
 }
 .job {
     display: grid;
-    grid-template-areas:    "title title title"
-                            "duration pay location"
-                            "description description description"
-                            "skills skills skills"
-                            "link link link";
+    grid-template-areas:    "title title"
+                            "duration location"
+                            "description description"
+                            "skills skills"
+                            "link link";
     grid-template-rows: min-content min-content min-content min-content auto;
-    grid-template-columns: 25% 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 0.2rem;
     padding: 1rem 1rem;
     background-color: var(--secondary);
@@ -618,12 +621,6 @@ footer a {
 
 .job .duration {
     grid-area: duration;
-    font-size: 1rem;
-    color: var(--text);
-}
-
-.job .pay {
-    grid-area: pay;
     font-size: 1rem;
     color: var(--text);
 }
@@ -663,7 +660,7 @@ footer a {
 
 .job .link a {
     text-decoration: none;
-    color: var(--text);
+    color: var(--background);
     text-transform: uppercase;
     font-weight: 500;
     text-align: center;

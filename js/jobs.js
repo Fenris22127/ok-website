@@ -41,21 +41,6 @@ function loadJobs() {
             ${checkText(jobsContent[i].duration)} 
             `;
         
-        // Adds the coin icon and the job pay
-        var jobPay = document.createElement("p");
-        jobPay.classList.add("details", "pay");
-        if (jobsContent[i].pay == "") {
-            jobPay.innerHTML = `
-            <span class="material-symbols-outlined">paid</span>
-            Nicht angegeben
-        `;
-        } else {
-            jobPay.innerHTML = `
-                <span class="material-symbols-outlined">paid</span>
-                ${jobsContent[i].pay} 
-            `;
-        }
-        
         // Adds the location icon and the job location
         var jobLocation = document.createElement("p");
         jobLocation.classList.add("details", "location");
@@ -105,7 +90,6 @@ function loadJobs() {
         // Adds the job title, duration, pay, location, description, skills and link to the job container
         jobContainer.appendChild(jobTitle);
         jobContainer.appendChild(jobDuration);
-        jobContainer.appendChild(jobPay);
         jobContainer.appendChild(jobLocation);
         jobContainer.appendChild(jobDescription);
         jobContainer.appendChild(jobSkills);

@@ -21,27 +21,27 @@ class Project {
  */
 const projectsContent = [
     new Project(
-        "Ein Projekt", 
-        "Das ist die Beschreibung des Projekts.", 
-        "www.example.com", 
-        "film_placeholder.jpg"
-    ),
-    new Project(
-        "Ein anderes Projekt", 
-        "Das ist die etwas längere Beschreibung des anderen Projekts.", 
-        "www.other-example.com", 
+        "Break", 
+        "Das Infomagazin für Wernigerode und den Landkreis Harz", 
+        "", 
         ""
     ),
     new Project(
-        "Anderes Projekt", 
-        "Das ist die Beschreibung des anderen anderen Projekts.", 
-        "www.other-example.com", 
+        "Grovesmühle-TV", 
+        "Die Filmgilde im Landschulheim Grovesmühle", 
+        "www.grovesmuehle.de", 
+        "film_placeholder.jpg"
+    ),
+    new Project(
+        "Campus-TV", 
+        "Das Campus-Fernsehen in Kooperation mit der Hochschule Harz", 
+        "", 
         ""
     ),
     new Project(
-        "Noch ein anderes Projekt", 
-        "Das ist die Beschreibung des einen anderen Projekts.", 
-        "www.other-example.com", 
-        "film_placeholder.jpg"
+        "Klappe auf - Jugend-TV im Harzkreis", 
+        "Jugendliche erforschen ihre Lebensumwelt", 
+        "www.klappe-auf-harz.de", 
+        ""
     ),
 ]

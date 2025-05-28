@@ -28,7 +28,19 @@ const news = [
     ),
     new News(
         "News 2", 
-        "08.04.2025", 
+        "07.04.2025", 
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit.", 
+        ""
+    ),
+    new News(
+        "News 3", 
+        "07.03.2025", 
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit.", 
+        ""
+    ),
+    new News(
+        "News 4", 
+        "07.05.2024", 
         "Lorem ipsum dolor sit amet consectetur adipiscing elit.", 
         ""
     ),

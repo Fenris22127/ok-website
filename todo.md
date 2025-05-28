@@ -10,7 +10,7 @@
 [x] Ausbildung
 [x] Instagram hinzufügen
 [x] Sponsoren
-[ ] Livestream
+[x] Livestream
 [ ] Datenschutz
 [ ] Nutzerkartei überarbeiten
 [ ] 404 testen
@@ -18,3 +18,5 @@
 [x] Guide: How to use
     [x] Team Image Illustrated Aspect Ratio Guide
 [x] Darkmode?
+[x] Date Sort Home Page
+[ ] Geld raus

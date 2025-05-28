@@ -22,20 +22,23 @@ document.body.onload = function() {loadNews()};
  */
 function loadNews() {
     var newsContainer = document.getElementById("newsContainer");
+    // Sort News according to date
+    var newsSorted = news.sort((a, b) => parseGermanDate(a.date) - parseGermanDate(b.date));
+    console.log(news);
 
-    for (var i = 0; i < news.length; i++) {
+    for (var i = 0; i < newsSorted.length; i++) {
         var newsItem = document.createElement("div");
         newsItem.className = "newsItem";
 
         // Check if the index is even or odd to determine the layout
         if(i % 2 == 0) { // Even index => left image, right text
-            newsAddImage(news, i, newsItem);
-            newsAddText(news, i, newsItem);
+            newsAddImage(newsSorted, i, newsItem);
+            newsAddText(newsSorted, i, newsItem);
         }
         else { // Odd index => right image, left text
             newsItem.className += " rightImage";
-            newsAddImage(news, i, newsItem);
-            newsAddText(news, i, newsItem);
+            newsAddImage(newsSorted, i, newsItem);
+            newsAddText(newsSorted, i, newsItem);
         }
         
         newsContainer.appendChild(newsItem);
@@ -47,6 +50,16 @@ function loadNews() {
         }
     }
     
+}
+
+/**
+ * Parses a German date string in the format "DD.MM.YYYY" or "DD.MM.YY" and returns a Date object.
+ * @param {String} dateStr The date string in the format "DD.MM.YYYY" or "DD.MM.YY".
+ * @returns {Date} A Date object representing the parsed date.
+ */
+function parseGermanDate(dateStr) {
+    const [day, month, year] = dateStr.split(".");
+    return new Date(`${year}-${month}-${day}`);
 }
 
 /**
