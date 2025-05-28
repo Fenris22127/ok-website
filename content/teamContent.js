@@ -67,19 +67,19 @@ const teamContents = [
     new TeamMember(
         "Brave", 
         "Geschäftshund/Chef",
-        "",
+        "Brave.JPG",
         "Team"
     ),
     new TeamMember(
         "Noah Helbig", 
         "Bundesfreiwilligendienst",
-        "",
+        "Noah.JPG",
         "Team"
     ),
     new TeamMember(
         "Sophie Rumyantseva", 
         "Bundesfreiwilligendienst",
-        "",
+        "Sophie.JPG",
         "Team"
     ),
     new TeamMember(
@@ -103,13 +103,13 @@ const teamContents = [
     new TeamMember(
         "Greta Dehnbostel", 
         "Praktikant",
-        "",
+        "Greta.JPG",
         "Team"
     ),
     new TeamMember(
         "Elisa Johanna Woelk", 
         "Praktikant",
-        "",
+        "Elisa.JPG",
         "Team"
     ),
 ]
