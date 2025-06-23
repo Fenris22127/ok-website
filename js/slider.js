@@ -18,12 +18,12 @@ document.body.onload = createSlider();
  */
 function createSlider() {
     var container = document.getElementById("slideshow-container");
-    var dotsContainer = document.getElementById("dots-container");
+    // var dotsContainer = document.getElementById("dots-container");
     
     //iterate through folder ../content/img/home/ and create a slide for each image
     for (var i = 0; i < imagesContent.length; i++) {
         createSlide(container, imagesContent[i].filename, i, imagesContent.length);
-        createDots(dotsContainer, i);
+        // createDots(dotsContainer, i);
     }
 }
 
@@ -67,12 +67,12 @@ function createSlide(container, image, index, length) {
  * @param {int} index               The index of the corresponding slide.
  * @returns {void}
  */
-function createDots(container, index) {
-    var dot = document.createElement("span");
-    dot.className = "dot";
-    dot.setAttribute("onclick", "currentSlide(" + (index + 1) + ")")
-    container.appendChild(dot);
-}
+// function createDots(container, index) {
+//     var dot = document.createElement("span");
+//     dot.className = "dot";
+//     dot.setAttribute("onclick", "currentSlide(" + (index + 1) + ")")
+//     container.appendChild(dot);
+// }
 
 /**
  * Initializes the slider by showing the first slide and setting up the event listeners for the dots.
@@ -119,9 +119,9 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(" active", "");
+//   }
   slides[slideIndex-1].style.display = "flex";  
-  dots[slideIndex-1].className += " active";
+//   dots[slideIndex-1].className += " active";
 }

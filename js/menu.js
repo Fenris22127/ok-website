@@ -78,7 +78,6 @@ function setDark(icons, x_icons) {
     //Update x social media icons
     for (let i = 0; i < x_icons.length; i++) {
         let src = x_icons[i].getAttribute("src")
-        console.log("Dark: " + src)
         if(src.includes("x_logo_light")){
             x_icons[i].setAttribute("src", src.replace("x_logo_light", "x_logo_dark"))
         }
@@ -103,7 +102,6 @@ function setLight(icons, x_icons) {
     //Update x social media icons
     for (let i = 0; i < x_icons.length; i++) {
         let src = x_icons[i].getAttribute("src")
-        console.log("Dark: " + src)
         if(src.includes("x_logo_dark")){
             x_icons[i].setAttribute("src", src.replace("x_logo_dark", "x_logo_light"))
         }

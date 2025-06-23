@@ -14,9 +14,9 @@
 [ ] Datenschutz
 [ ] Nutzerkartei überarbeiten
 [ ] 404 testen
-[ ] Team-Fotos hinzufügen
+[x] Team-Fotos hinzufügen
 [x] Guide: How to use
     [x] Team Image Illustrated Aspect Ratio Guide
 [x] Darkmode?
 [x] Date Sort Home Page
-[ ] Geld raus
+[x] Geld raus

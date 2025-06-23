@@ -482,7 +482,7 @@ footer a {
 
 .program_point_grid {
     display: grid;
-    grid-template-columns: max-content auto;
+    grid-template-columns: 6rem auto;
     grid-template-areas: 
         "start title"
         "end description";
@@ -506,6 +506,7 @@ footer a {
     font-weight: 700;
     font-size: 2rem;
     color: var(--orange);
+    text-align: right;
 }
 
 .program_point_grid .end {

@@ -1,130 +1,106 @@
 /**
- * A class representing a program point.
+ * A class representing a program point with all its transmission data.
  * @typedef {Object} ProgramItem
- * @property {string} start - The start time of the program point.
- * @property {string} end - The end time of the program point.
  * @property {string} title - The title of the program point.
- * @property {string} description - The description of the program point.
- * @property {string} link - The link to the program point.
+ * @property {string} duration - The duration of the program point in minutes
+ * @property {string[]} dateTime - An Array of strings indicating when the item will be on the program in the format YYYY-MM-dd - HH:mm
  */
 class ProgramItem {
-    constructor(start, end, title, description, link) {
-        this.start = start;
-        this.end = end;
-        this.title = title;
-        this.description = description;
-        this.link = link;
+    constructor(title, duration, dateTime) {
+        this.title = title
+        this.duration = duration
+        this.dateTime = dateTime
     }
 }
 
 /**
- * An array of program items.
- * @type {ProgramItem[]}
+ * A class representing a program point with only a single date and time.
+ * @typedef {Object} ProgramItemSingle
+ * @property {string} title - The title of the program point.
+ * @property {string} duration - The duration of the program point in minutes
+ * @property {Date} date - The date and time indicating a time where this item will be on the program
  */
-const programItems = [
+class ProgramItemSingle {
+    constructor(title, duration, date) {
+        this.title = title
+        this.duration = duration
+        this.date = date
+    }
+}
+
+/**
+ * The list that will be filled with ProgramItemSingle objects and represents the list of all items in the program for the week.
+ */
+var programItems = []
+
+/**
+ * The list containing all program points.
+ */
+const items = [
     new ProgramItem(
-        "07:00", 
-        "07:30", 
-        "Schulfilmfrühstück", 
-        "Ein tägliches Morgenprogramm, das Kurzfilme von Schulfilmprojekten zeigt.",
-        "https://www.example.com"
+        "Meeting", 
+        "30", 
+        [
+            "2025-06-23 - 10:00",
+            "2025-06-24 - 14:00", 
+            "2025-06-25 - 12:00"
+        ]
     ),
     new ProgramItem(
-        "07:30", 
-        "08:00", 
-        "Lokales im Fokus", 
-        "Porträts über regionale Filmemacher und ihre Arbeiten.",
-        "https://www.example.com"
+        "Workshop", 
+        "60", 
+        [
+            "2025-06-24 - 9:00", 
+            "2025-06-26 - 10:00"
+        ]
     ),
     new ProgramItem(
-        "08:00", 
-        "09:00", 
-        "Kreative Köpfe", 
-        "Interviews mit jungen Filmkünstler:innen und Einblicke in ihre Projekte.",
-        "https://www.example.com"
-    ),
-    new ProgramItem(
-        "09:00", 
-        "09:30", 
-        "Kinderkino kurz & bunt", 
-        "Animations- und Kurzfilme für Kinder, produziert von lokalen Schulen.",
-        "https://www.example.com"
-    ),
-    new ProgramItem(
-        "09:30", 
-        "10:00", 
-        "Filmgymnasium live", 
-        "Ein interaktives Format, bei dem Filmideen diskutiert werden.",
-        "https://www.example.com"
-    ),
-    new ProgramItem(
-        "10:00", 
-        "12:00", 
-        "Dokumentarlinsen", 
-        "Dokumentarfilme über soziale oder kulturelle Themen, produziert von Nachwuchsfilmer:innen.",
-        "https://www.example.com"
-    ),
-    new ProgramItem(
-        "12:00", 
-        "12:30", 
-        "Snack-Kino zur Mittagszeit", 
-        "Eine Auswahl preisgekrönter Kurzfilme, passend zur Mittagspause.",
-        "https://www.example.com"
-    ),
-    new ProgramItem(
-        "12:30", 
-        "13:30", 
-        "Filmwerkstatt hinter den Kulissen", 
-        "Wie entstehen Schüler- und Kurzfilme? Ein Blick hinter die Kulissen.",
-        "https://www.example.com"
-    ),
-    new ProgramItem(
-        "13:30", 
-        "14:00", 
-        "Kinoquiz: Alles über Filme", 
-        "Ein Quizformat, bei dem Teams Filmwissen testen.",
-        "https://www.example.com"
-    ),
-    new ProgramItem(
-        "14:00", 
-        "15:00", 
-        "Jung & Visionär", 
-        "Spielfilme junger Talente, produziert in Kooperation mit Schulen und Filmgruppen.",
-        "https://www.example.com"
-    ),
-    new ProgramItem(
-        "15:00", 
-        "15:30", 
-        "Publikum entscheidet", 
-        "Zuschauer können über den besten Kurzfilm des Tages abstimmen.",
-        "https://www.example.com"
-    ),
-    new ProgramItem(
-        "15:30", 
-        "16:30", 
-        "Regionale Filmperlen", 
-        "Vorstellung regionaler Filmfestivals und Gewinnerbeiträge.",
-        "https://www.example.com"
-    ),
-    new ProgramItem(
-        "16:30", 
-        "17:00", 
-        "Neue Horizonte: Experimente im Film", 
-        "Innovative und experimentelle Kurzfilme.",
-        "https://www.example.com"
-    ),
-    new ProgramItem(
-        "17:00", 
-        "19:00", 
-        "Abendkino für die Familie", 
-        "Lokale Familienfilme und Gemeinschaftsprojekte.",
-        "https://www.example.com"
-    ),
-    new ProgramItem(
-        "19:00", 
-        "20:00", 
-        "Lichter der Zukunft", 
-        "Abschluss des Tages mit Filmprojekten, die besondere Unterstützung erhalten haben.",
-        "https://www.example.com"
+        "Event", 
+        "120", 
+        [
+            "2025-06-23 - 18:00"
+        ]
     ),
 ]
+
+/**
+ * Sorts the program points in ascending order
+ */
+function sortProgramPoints() {
+    separate()
+    programItems.sort((a, b) => {
+        return a.date - b.date;
+    })
+}
+
+/**
+ * Separates program points that will be played multiple times this week (and therefore have more than one date) into single items with only a single date and time
+ */
+function separate() {
+    for (let i = 0; i < items.length; i++) { // iterates through the list with all program points
+        let pItem = items[i]
+        for(let j = 0; j < items[i].dateTime.length; j++) { // iterates through the list of dates & creates a new program point for each date
+            var newItem = 
+                new ProgramItemSingle(
+                    pItem.title,
+                    pItem.duration,
+                    splitDate(items[i].dateTime[j])
+                )
+            programItems.push(newItem)
+        }
+    }
+}
+
+/**
+ * Separates the date between the date and the time, adds a 0 in front of the hour if necessary and creates a new Date object with the date and time
+ * @param {string} dateTime - The string containing the date and time of when the program point will be played
+ * @returns {Date} - A date object of when the program point will be played
+ */
+function splitDate(dateTime) {
+    var dTime = dateTime.split(" - ");
+    if(dTime[1].split(":")[0].length == 1) {
+        dTime[1] = "0" + dTime[1]
+    }
+    var date = new Date(`${dTime[0]}T${dTime[1]}`);
+    return date;
+}
