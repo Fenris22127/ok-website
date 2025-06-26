@@ -10,22 +10,18 @@
  * @date 2025-05-07
  * @since 1.0
  */
-document.body.onload = createSlider();
+document.addEventListener("DOMContentLoaded", function() {
+    $.getJSON("../php/list-images.php", function(data) {
+        var container = document.getElementById("slideshow-container");
+        var imageAmount = data.length;
 
-/**
- * Creates the image slider by iterating through the imagesContent array and creating slides and dots.
- * @returns {void}
- */
-function createSlider() {
-    var container = document.getElementById("slideshow-container");
-    // var dotsContainer = document.getElementById("dots-container");
-    
-    //iterate through folder ../content/img/home/ and create a slide for each image
-    for (var i = 0; i < imagesContent.length; i++) {
-        createSlide(container, imagesContent[i].filename, i, imagesContent.length);
-        // createDots(dotsContainer, i);
-    }
-}
+        for (var i = 0; i < imageAmount; i++) {
+            createSlide(container, data[i], i, imageAmount);
+        }
+        // Nach dem Laden der Slides, zeige den ersten Slide an:
+        showSlides(slideIndex);
+    });
+});
 
 /**
  * Creates a slide element with an image, its title and a number indicating its position in the slider.
@@ -50,39 +46,13 @@ function createSlide(container, image, index, length) {
     img.src = "../content/img/home/" + image;
     slide.appendChild(img);
 
-    //Add the title of the image if it is not empty
-    if (imagesContent[index].title != "") {
-        var title = document.createElement("div");
-        title.className = "text";
-        title.innerHTML = checkText(imagesContent[index].title);
-        slide.appendChild(title);
-    }
-
     container.appendChild(slide);
 }
-
-/**
- * Adds a dot element for each slide to the dots container.
- * @param {HTMLElement} container   The container element for the dots.
- * @param {int} index               The index of the corresponding slide.
- * @returns {void}
- */
-// function createDots(container, index) {
-//     var dot = document.createElement("span");
-//     dot.className = "dot";
-//     dot.setAttribute("onclick", "currentSlide(" + (index + 1) + ")")
-//     container.appendChild(dot);
-// }
 
 /**
  * Initializes the slider by showing the first slide and setting up the event listeners for the dots.
  */
 let slideIndex = 1;
-
-/**
- * Shows the current slide based on the slideIndex.
- */
-showSlides(slideIndex);
 
 /**
  * Moves to the next or previous slide based on the parameter n.
@@ -113,15 +83,13 @@ function currentSlide(n) {
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("slides");
-  let dots = document.getElementsByClassName("dot");
+  //let dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace(" active", "");
-//   }
-  slides[slideIndex-1].style.display = "flex";  
-//   dots[slideIndex-1].className += " active";
+
+  slides[slideIndex-1].style.display = "flex";
 }
+

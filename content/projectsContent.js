@@ -30,13 +30,13 @@ const projectsContent = [
         "Grovesmühle-TV", 
         "Die Filmgilde im Landschulheim Grovesmühle", 
         "www.grovesmuehle.de", 
-        "film_placeholder.jpg"
+        "Grovesmühle"
     ),
     new Project(
         "Campus-TV", 
         "Das Campus-Fernsehen in Kooperation mit der Hochschule Harz", 
         "", 
-        ""
+        "Campus-TV"
     ),
     new Project(
         "Klappe auf - Jugend-TV im Harzkreis", 

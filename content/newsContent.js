@@ -24,7 +24,7 @@ const news = [
         "News 1", 
         "08.04.2025", 
         "Lorem ipsum dolor sit amet consectetur adipiscing elit.", 
-        "QueerFilm.png"
+        "QueerFilm"
     ),
     new News(
         "News 2", 

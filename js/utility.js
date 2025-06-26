@@ -1,4 +1,3 @@
-
 /**
  * Checks if the text is empty and returns "??" if it is, otherwise returns the text.
  * @param {string} text The text to check.
@@ -21,7 +20,7 @@ function checkText(text) {
 function checkLink(link) {
     //if the link is a valid URL, return link
     if (link.match(/^(https?:\/\/)?(w{3}\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/)) {
-        return link;
+        return "https://" + link;
     }
     //if the link is empty or invalid, return "#"
     return "#";
@@ -38,3 +37,24 @@ function checkLink(link) {
     ([a-z\.]{2,6})  - Matches the domain extension (2 to 6 letters) => links like ".com", ".org", ".co.uk"
     ([\/\w \.-]*)*  - Matches the path of the URL (optional)
 */
+
+const folder = "../content/img/";
+
+/**
+ * This function retrieves an image by its name from a specified directory.
+ * @param {string} imgName - The name of the image to retrieve.
+ * @param {string} dir - The directory where the image is located.
+ * @returns {string} The file path to the image or an empty string, if no image could be found.
+ */
+function getImageByName(imgName, dir, callback) {
+    $.getJSON("../php/get-images.php", {
+        name: imgName,
+        dir: folder + dir
+    }, function(data) {
+        if (data.path != null && data.path != "") {
+            callback(data.path);
+        } else {
+            callback("");
+        }
+    });
+}

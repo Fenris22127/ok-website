@@ -207,9 +207,14 @@ nav .icon {
     gap: 1rem;
 }
 
-.rightImage {
+/* FIX */
+.newsItem:nth-child(odd) {
     flex-direction: row-reverse;
 }
+
+/* .rightImage {
+    flex-direction: row-reverse;
+} */
 
 .newsItem img {
     width: 16rem;

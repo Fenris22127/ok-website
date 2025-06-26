@@ -22,34 +22,30 @@ document.body.onload = function() {loadNews()};
  */
 function loadNews() {
     var newsContainer = document.getElementById("newsContainer");
-    // Sort News according to date
-    var newsSorted = news.sort((a, b) => parseGermanDate(a.date) - parseGermanDate(b.date));
-    console.log(news);
+    var newsSorted = news.slice().sort((a, b) => parseGermanDate(a.date) - parseGermanDate(b.date));
+    var newsItems = [];
 
-    for (var i = 0; i < newsSorted.length; i++) {
+    // Schritt 1: Erzeuge alle News-Container synchron und füge sie dem DOM hinzu
+    for (let i = 0; i < newsSorted.length; i++) {
         var newsItem = document.createElement("div");
         newsItem.className = "newsItem";
-
-        // Check if the index is even or odd to determine the layout
-        if(i % 2 == 0) { // Even index => left image, right text
-            newsAddImage(newsSorted, i, newsItem);
-            newsAddText(newsSorted, i, newsItem);
-        }
-        else { // Odd index => right image, left text
-            newsItem.className += " rightImage";
-            newsAddImage(newsSorted, i, newsItem);
-            newsAddText(newsSorted, i, newsItem);
-        }
-        
+        if (i % 2 !== 0) newsItem.className += " rightImage";
+        newsAddText(newsSorted, i, newsItem);
         newsContainer.appendChild(newsItem);
+        newsItems.push(newsItem);
 
-        // Add a dots divider between news items if it's not the last item
-        if (i != news.length - 1) {
+        if (i != newsSorted.length - 1) {
             var dots = document.createElement("p", { is: "dots-divider" });
             newsContainer.appendChild(dots);
         }
     }
-    
+
+    // Schritt 2: Lade die Bilder asynchron und füge sie in die richtigen Container ein
+    for (let i = 0; i < newsSorted.length; i++) {
+        getImageByName(newsSorted[i].image, "news", function(imgPath) {
+            newsAddImg(imgPath, newsItems[i], newsSorted, i);
+        });
+    }
 }
 
 /**
@@ -92,39 +88,50 @@ function newsAddText(news, i, newsItem) {
 }
 
 /**
- * Adds the image to the news item. If no image is available, it creates a placeholder with the first two letters of the words of the title.
- * @param {News[]} news             An Array containing news items
- * @param {int} i                   The index of the news item to be added
- * @param {HTMLDivElement} newsItem The news item to which the image will be added
+ * Adds the image to the news item. If no image is available, a placeholder is added.
+ * @param {string} imgPath              The path to the image to be added
+ * @param {HTMLDivElement} newsItem     The news item to which the image will be added
+ * @param {News[]} news                 An Array containing news items
+ * @param {int} i                       The index of the news item to be added
  * @returns {void}
  */
-function newsAddImage(news, i, newsItem) {
-    // Check if an image is available
-    if (news[i].image) {
+function newsAddImg(imgPath, newsItem, news, i) {
+    if(imgPath != "" && imgPath != null) {
         var img = document.createElement("img");
-        img.src = "../content/img/news/" + news[i].image;
+        img.src = imgPath;
         img.alt = news[i].title;
         img.className = "newsImage";
         newsItem.appendChild(img);
-    } else {
-        // If no image is available, create a placeholder with the first two letters of the words of the title
-        var str = checkText(news[i].title);
-        var matches = str.match(/\b(\w)/g);
-        if (matches === null) {
-            matches = ["?"];
-        }
-        var acronym = matches.join('').toUpperCase();
-        acronym = acronym.substring(0, 2);
-
-        // Create a placeholder image with the acronym
-        var imageAlt = document.createElement("div");
-        imageAlt.className = "imageAlt";
-        var span = document.createElement("span");
-        span.innerHTML = acronym;
-        imageAlt.appendChild(span);
-
-        newsItem.appendChild(imageAlt);
     }
+    else {
+        addImgPlaceholder(newsItem, news[i].title);
+    } 
+}
+
+/**
+ * Creates a placeholder with the first two letters of the words of the title.
+ * @param {HTMLDivElement} newsItem The news item to which the image will be added
+ * @param {*} title                 The title of the news item, used to create a placeholder image
+ * @returns {void}
+ */
+function addImgPlaceholder(newsItem, title) {
+    // If no image is available, create a placeholder with the first two letters of the words of the title
+    var str = checkText(title);
+    var matches = str.match(/\b(\w)/g);
+    if (matches === null) {
+        matches = ["?"];
+    }
+    var acronym = matches.join('').toUpperCase();
+    acronym = acronym.substring(0, 2);
+
+    // Create a placeholder image with the acronym
+    var imageAlt = document.createElement("div");
+    imageAlt.className = "imageAlt";
+    var span = document.createElement("span");
+    span.innerHTML = acronym;
+    imageAlt.appendChild(span);
+
+    newsItem.appendChild(imageAlt);
 }
 
 /**

@@ -15,8 +15,8 @@
  * Function to load board and team members when the page has loaded.
 */
 document.body.onload = function() {
-    loadBoard()
     loadTeam()
+    loadBoard()
 };
 
 /**
@@ -29,27 +29,29 @@ function loadBoard() {
     boardMembers.forEach(member => {
         var personDiv = document.createElement("div");
         personDiv.className = "person";
-        if (member.image != "") {
+        
+        getImageByName(member.name, "team", function(imgPath) {
             var img = document.createElement("img");
-            img.src = member.image;
-            img.alt = member.name;
+            img.src = (imgPath != "" && imgPath != null)
+                ? imgPath
+                : "../content/img/team/person_placeholder.svg";
+            img.alt = checkText(member.name);
             personDiv.appendChild(img);
-        } else {
-            var img = document.createElement("img");
-            img.src = "../content/img/team/person_placeholder.svg";
-            img.alt = member.name;
+
+            img.alt = checkText(member.name);
             personDiv.appendChild(img);
-        }
-        var name = document.createElement("h3");
-        name.innerHTML = checkText(member.name);
-
-        var role = document.createElement("p");
-        role.className = "role";
-        role.innerHTML = checkText(member.role);
-
-        personDiv.appendChild(name);
-        personDiv.appendChild(role);
-        container.appendChild(personDiv);
+    
+            var name = document.createElement("h3");
+            name.innerHTML = checkText(member.name);
+    
+            var role = document.createElement("p");
+            role.className = "role";
+            role.innerHTML = checkText(member.role);
+    
+            personDiv.appendChild(name);
+            personDiv.appendChild(role);
+            container.appendChild(personDiv);
+        });
     });
 }
 
@@ -60,31 +62,30 @@ function loadBoard() {
 function loadTeam() {
     var container = document.getElementById("teamContainer");
     var teamMembers = teamContents.filter(member => member.group === "Team");
-    teamMembers = sortTeamMembers(teamMembers)    
+    // Sortiere das Array vor der Verarbeitung!
+    sortTeamMembers(teamMembers);
     teamMembers.forEach(member => {
         var personDiv = document.createElement("div");
         personDiv.className = "person";
-        if (member.image != "") {
+        getImageByName(member.name, "team", function(imgPath) {
             var img = document.createElement("img");
-            img.src = "../content/img/team/" + member.image;
-            img.alt = member.name;
-            personDiv.appendChild(img);
-        } else {
-            var img = document.createElement("img");
-            img.src = "../content/img/team/person_placeholder.svg";
+            img.src = (imgPath != "" && imgPath != null)
+                ? imgPath
+                : "../content/img/team/person_placeholder.svg";
             img.alt = checkText(member.name);
             personDiv.appendChild(img);
-        }
-        var name = document.createElement("h3");
-        name.innerHTML = checkText(member.name);
 
-        var role = document.createElement("p");
-        role.className = "role";
-        role.innerHTML = checkText(member.role);
+            var name = document.createElement("h3");
+            name.innerHTML = checkText(member.name);
 
-        personDiv.appendChild(name);
-        personDiv.appendChild(role);
-        container.appendChild(personDiv);
+            var role = document.createElement("p");
+            role.className = "role";
+            role.innerHTML = checkText(member.role);
+
+            personDiv.appendChild(name);
+            personDiv.appendChild(role);
+            container.appendChild(personDiv);
+        });
     });
 }
 
