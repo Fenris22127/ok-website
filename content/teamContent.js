@@ -66,11 +66,6 @@ const teamContents = [
         "Team"
     ),
     new TeamMember(
-        "Sophie Rumyantseva", 
-        "Bundesfreiwilligendienst",
-        "Team"
-    ),
-    new TeamMember(
         "Jenny Spannaus", 
         "Bundesfreiwilligendienst",
         "Team"

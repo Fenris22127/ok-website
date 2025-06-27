@@ -46,7 +46,7 @@ function createProgram() {
 		var date = new Date(unique[i])
 
 		// Create a header in the format "Day (DD.MM.YY)"
-		var title = `${dayNames[date.getDay()]} (${date.getDate()}.${date.getMonth()}.${date.getFullYear()})`
+		var title = `${dayNames[date.getDay()]} (${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()})`
 		var header = document.createElement("h2");
 		header.innerHTML = title
 		container.appendChild(header)
