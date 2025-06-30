@@ -20,7 +20,10 @@ function checkText(text) {
 function checkLink(link) {
     //if the link is a valid URL, return link
     if (link.match(/^(https?:\/\/)?(w{3}\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/)) {
-        return "https://" + link;
+        if (!link.match(/^(https|http):\/\//)) {
+            return "https://" + link;
+        }
+        return link;
     }
     //if the link is empty or invalid, return "#"
     return "#";
@@ -57,4 +60,8 @@ function getImageByName(imgName, dir, callback) {
             callback("");
         }
     });
+}
+
+function stripImageLink(link) {
+    return link.replace(/\.(png|PNG|svg|jpg|JPG|jpeg|JPEG|gif|bmp|webp)$/, "");
 }

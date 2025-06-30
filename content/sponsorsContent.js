@@ -20,32 +20,32 @@ class Sponsor {
 var sponsorsContent = [
   new Sponsor(
     "Aktion Mensch",
-    "Aktion_Mensch.png",
-    "https://www.aktion-mensch.de"
+    "Aktion_Mensch",
+    "www.aktion-mensch.de"
   ),
   new Sponsor(
     "Harzsparkasse",
-    "Harzsparkasse.jpg",
+    "Harzsparkasse",
     "https://www.harzsparkasse.de"
   ),
   new Sponsor(
     "Stadt Wernigerode",
-    "Stadt_Wernigerode.PNG",
+    "Stadt_Wernigerode",
     "https://www.wernigerode.de"
   ),
   new Sponsor(
     "ÖSA Versicherungen",
-    "ösa.png",
+    "ösa",
     "https://www.oesa.de"
   ),
   new Sponsor(
     "Stadtwerke Wernigerode",
-    "Stadtwerke.png",
+    "Stadtwerke",
     "https://www.stadtwerke-wernigerode.de"
   ),
   new Sponsor(
     "Medienanstalt Sachsen-Anhalt",
-    "MSA.jpg",
+    "MSA",
     "https://medienanstalt-sachsen-anhalt.de"
   ),
 ];

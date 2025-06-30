@@ -29,7 +29,7 @@ function loadNews() {
     for (let i = 0; i < newsSorted.length; i++) {
         var newsItem = document.createElement("div");
         newsItem.className = "newsItem";
-        if (i % 2 !== 0) newsItem.className += " rightImage";
+        if (i % 2 !== 0) newsItem.classList.add("odd");
         newsAddText(newsSorted, i, newsItem);
         newsContainer.appendChild(newsItem);
         newsItems.push(newsItem);
@@ -42,7 +42,8 @@ function loadNews() {
 
     // Schritt 2: Lade die Bilder asynchron und füge sie in die richtigen Container ein
     for (let i = 0; i < newsSorted.length; i++) {
-        getImageByName(newsSorted[i].image, "news", function(imgPath) {
+        var path = stripImageLink(newsSorted[i].image);
+        getImageByName(path, "news", function(imgPath) {
             newsAddImg(imgPath, newsItems[i], newsSorted, i);
         });
     }

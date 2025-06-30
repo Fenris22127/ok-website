@@ -24,8 +24,8 @@ loadSponsors();
 function loadSponsors() {
     var container = document.getElementById("sponsors");
     var sponsors = sponsorsContent.sort((a, b) => a.name.localeCompare(b.name));
-    for (var i = 0; i < sponsorsContent.length; i++) {
-        createSponsor(container, sponsorsContent[i]);
+    for (var i = 0; i < sponsors.length; i++) {
+        createSponsor(container, sponsors[i]);
     }
 }
 
@@ -36,20 +36,42 @@ function loadSponsors() {
  * @returns {void}
  */
 function createSponsor(container, sponsor) {
-    var sponsorLink = document.createElement("a");
-    sponsorLink.className = "sponsor";
-    sponsorLink.href = checkLink(sponsor.url);
-    sponsorLink.target = "_blank";
-    if(sponsor.logo != "") {
-        var img = document.createElement("img");
-        img.src = "../content/img/sponsors/" + sponsor.logo;
-        img.alt = sponsor.name;
-        img.title = sponsor.name;
-        img.onclick = function() {window.open(sponsor.url, "_blank")};
-        sponsorLink.appendChild(img);
-    }
-    var name = document.createElement("p");
-    name.innerHTML = checkText(sponsor.name);
-    sponsorLink.appendChild(name);
-    container.appendChild(sponsorLink);
+    var logo = stripImageLink(sponsor.logo);
+    getImageByName(logo, "sponsors", function(imgPath) {
+        var sponsorLink = document.createElement("a");
+        sponsorLink.className = "sponsor";
+        var link = checkLink(sponsor.url);
+        sponsorLink.href = link;
+        sponsorLink.target = "_blank";
+        if(imgPath != "" && imgPath != null) {
+            var img = document.createElement("img");
+            img.src = imgPath;
+            img.alt = sponsor.name;
+            img.title = sponsor.name;
+            img.onclick = function() {window.open(link, "_blank")};
+            sponsorLink.appendChild(img);
+        }
+        var name = document.createElement("p");
+        name.innerHTML = checkText(sponsor.name);
+        sponsorLink.appendChild(name);
+        container.appendChild(sponsorLink);
+    });
+    
+    // var sponsorLink = document.createElement("a");
+    // sponsorLink.className = "sponsor";
+    // var link = checkLink(sponsor.url);
+    // sponsorLink.href = link;
+    // sponsorLink.target = "_blank";
+    // if(sponsor.logo != "") {
+    //     var img = document.createElement("img");
+    //     img.src = "../content/img/sponsors/" + sponsor.logo;
+    //     img.alt = sponsor.name;
+    //     img.title = sponsor.name;
+    //     img.onclick = function() {window.open(link, "_blank")};
+    //     sponsorLink.appendChild(img);
+    // }
+    // var name = document.createElement("p");
+    // name.innerHTML = checkText(sponsor.name);
+    // sponsorLink.appendChild(name);
+    // container.appendChild(sponsorLink);
 }

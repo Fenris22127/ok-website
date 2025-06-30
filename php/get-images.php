@@ -1,5 +1,6 @@
 <?php
-header('Content-Type: application/json');
+header('Content-Type: application/json; charset=utf-8');
+setlocale(LC_ALL, 'de_DE.UTF-8');
 
 function findImageByName($directory, $baseName) {
     $extensions = ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp'];

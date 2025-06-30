@@ -136,6 +136,12 @@ a.orange:hover {
     border-radius: 0.5rem;
 }
 
+.credit {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
 /* #region: -------- NAVIGATION -------- */
 header nav {
     overflow: hidden;
@@ -208,7 +214,7 @@ nav .icon {
 }
 
 /* FIX */
-.newsItem:nth-child(odd) {
+.newsItem.odd {
     flex-direction: row-reverse;
 }
 
