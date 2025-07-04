@@ -80,9 +80,4 @@ const teamContents = [
         "Einstiegsqualifizierungsjahr",
         "Team"
     ),
-    new TeamMember(
-        "Elisa Johanna Woelk", 
-        "Praktikant",
-        "Team"
-    ),
 ]

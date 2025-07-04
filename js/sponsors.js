@@ -56,22 +56,4 @@ function createSponsor(container, sponsor) {
         sponsorLink.appendChild(name);
         container.appendChild(sponsorLink);
     });
-    
-    // var sponsorLink = document.createElement("a");
-    // sponsorLink.className = "sponsor";
-    // var link = checkLink(sponsor.url);
-    // sponsorLink.href = link;
-    // sponsorLink.target = "_blank";
-    // if(sponsor.logo != "") {
-    //     var img = document.createElement("img");
-    //     img.src = "../content/img/sponsors/" + sponsor.logo;
-    //     img.alt = sponsor.name;
-    //     img.title = sponsor.name;
-    //     img.onclick = function() {window.open(link, "_blank")};
-    //     sponsorLink.appendChild(img);
-    // }
-    // var name = document.createElement("p");
-    // name.innerHTML = checkText(sponsor.name);
-    // sponsorLink.appendChild(name);
-    // container.appendChild(sponsorLink);
 }

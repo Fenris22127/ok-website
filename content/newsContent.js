@@ -21,27 +21,27 @@ class News {
  */
 const news = [
     new News(
-        "News 1", 
-        "08.04.2025", 
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit.", 
-        "QueerFilm"
+        "13. Internationales Johannes-Brahms-Chorfestival", 
+        "02.07.2025", 
+        "Vom 2. bis 6. Juli 2025 werden festliche Konzerte, spannende Wettbewerbe und internationale Chor-Vielfalt präsentiert.", 
+        "Chorfestival"
     ),
     new News(
-        "News 2", 
-        "07.04.2025", 
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit.", 
-        ""
+        "Wernigeröder Schlossfestspiele 2025", 
+        "26.07.2025", 
+        "Junge, hochtalentierte Sänger am Anfang ihrer Karriere und das Philharmonische Kammerorchester Wernigerode unter der musikalischen Leitung von MD Christian Fitzner gestalten ein vielfältiges Sommervergnügen in der unverwechselbaren Atmosphäre von Schloß Wernigerode.", 
+        "Schlossfestspiele"
     ),
     new News(
-        "News 3", 
-        "07.03.2025", 
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit.", 
-        ""
+        "2. Arschbombenmeisterschaft", 
+        "08.08.2025", 
+        "Am Freitag, 8. August, heißt es von 13 bis 17 Uhr „Bauchklatscher ade, Arschbombe olé!“. Das Waldhofbad Wernigerode lädt erneut zu einem besonders spaßigen Wasservergnügen ein – der 2. Arschbombenmeisterschaft in Wernigerode!", 
+        "Arschbombenmeisterschaft"
     ),
     new News(
-        "News 4", 
-        "07.05.2024", 
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit.", 
-        ""
+        "CSD Magdeburg", 
+        "23.08.2025", 
+        "Neben den Eröffnungsreden unserer Schirmpersonen, sowie der Vorstellung unterstützender Parteien und der LSBTIQ*- Organisationen werden wir euch verschiedenste Künstler*innen Präsentiert.",
+        "CSD-Magdeburg"
     ),
 ]

@@ -24,7 +24,7 @@ const projectsContent = [
         "Break", 
         "Das Infomagazin für Wernigerode und den Landkreis Harz", 
         "", 
-        ""
+        "Break"
     ),
     new Project(
         "Grovesmühle-TV", 

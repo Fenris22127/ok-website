@@ -1,4 +1,15 @@
 /**
+ * 
+ * This file contains several utility functions used across the website.
+ * 
+ * @file utility.js
+ * @author Elisa Johanna Woelk
+ * @version 1.0
+ * @date 2025-05-06
+ * @since 1.1
+ */
+
+/**
  * Checks if the text is empty and returns "??" if it is, otherwise returns the text.
  * @param {string} text The text to check.
  * @returns {string}    The text or "??" if the text is empty.
@@ -62,6 +73,11 @@ function getImageByName(imgName, dir, callback) {
     });
 }
 
+/**
+ * Strips the image file extension from a link.
+ * @param {string} link The link to be stripped of its image file extension.
+ * @returns {string} The link without the image file extension.
+ */
 function stripImageLink(link) {
     return link.replace(/\.(png|PNG|svg|jpg|JPG|jpeg|JPEG|gif|bmp|webp)$/, "");
 }
