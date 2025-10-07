@@ -43,4 +43,11 @@ const jobsContent = [
         "OK Wernigerode",
         ""
     ),
+    new Job(
+        "Bundesfreiwilligendienst", 
+        "Wir bieten medienpädagogische Projekte an, wodurch Freiwillige ihre Medienkompetenz erweitern und eigene Filmbeiträge produzieren können.",
+        "1 Jahr", 
+        "OK Wernigerode",
+        ""
+    ),
 ]
