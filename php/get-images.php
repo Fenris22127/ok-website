@@ -1,4 +1,3 @@
-<!-- Gets an image by name from a passed directory -->
 <?php
 header('Content-Type: application/json; charset=utf-8');
 setlocale(LC_ALL, 'de_DE.UTF-8');

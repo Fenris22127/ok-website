@@ -64,12 +64,17 @@ function getImageByName(imgName, dir, callback) {
     $.getJSON("../php/get-images.php", {
         name: imgName,
         dir: folder + dir
-    }, function(data) {
+    })
+    .done(function(data) {
         if (data.path != null && data.path != "") {
             callback(data.path);
         } else {
             callback("");
         }
+    })
+    .fail(function(textStatus, error) {
+        console.error("getImageByName AJAX error:", textStatus, error);
+        callback("");
     });
 }
 

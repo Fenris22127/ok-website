@@ -1,4 +1,3 @@
-<!-- Gets all images for the image slider from the folder content/img/home -->
 <?php
 header('Content-Type: application/json; charset=utf-8');
 setlocale(LC_ALL, 'de_DE.UTF-8');
