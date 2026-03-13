@@ -1078,6 +1078,9 @@ footer a {
     .newsItemText {
         width: 100%;
     }
+    .newsItem.odd {
+        flex-direction: column;
+    }
     .newsItem img {
         width: 20rem;
         height: 20rem;
