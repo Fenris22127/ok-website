@@ -536,16 +536,15 @@ footer a {
 /* #endregion: -------- PROGRAM POINTS -------- */
 
 /* #region: -------- LIVESTREAM -------- */
-.livestream {
+.livestream{
     background-color: var(--secondary);
-    /* width: 60%; */
-    /* height: 30rem; */
-    width: 100%;
+    width: 30%;
+    height: 30%;
     aspect-ratio: 16 / 9;
-    margin: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /*justify-content: center;
+    align-items: center;*/
+    margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
@@ -555,6 +554,13 @@ footer a {
     border: none;
 }
 /* #endregion: -------- LIVESTREAM -------- */
+
+/* #region: -------- MITMACHEN -------- */
+.mitmachen{
+
+}
+/* #endregion: -------- MITMACHEN -------- */
+
 
 /* #region: -------- PROJECTS -------- */
 .projects {
@@ -576,8 +582,9 @@ footer a {
 .project img {
     width: 100%;
     aspect-ratio: 1 / 1;
-    object-fit: cover;
+    /*object-fit: cover;*/
     border-radius: 0.5rem;
+
 }
 
 .project h3 {
@@ -704,7 +711,7 @@ footer a {
 }
 
 .person img {
-    width: 80%;
+    width: 50%;
     border-radius: 50%;
     border: 0.1rem solid var(--secondary);
     background-color: var(--secondary);
