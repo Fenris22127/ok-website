@@ -39,7 +39,6 @@ const teamContents = [
         "Schriftführer",
         "Vorstand"
     ),
-    
     new TeamMember(
         "Petra Zaretzke", 
         "Geschäftsführung",
@@ -61,23 +60,28 @@ const teamContents = [
         "Team"
     ),
     new TeamMember(
-        "Noah Helbig", 
-        "Bundesfreiwilligendienst",
-        "Team"
-    ),
-    new TeamMember(
         "Jenny Spannaus", 
-        "Bundesfreiwilligendienst",
-        "Team"
-    ),
-    new TeamMember(
-        "Leon Hauch", 
-        "Bundesfreiwilligendienst",
+        "Auszubildende",
         "Team"
     ),
     new TeamMember(
         "Colin Weicht", 
         "Einstiegsqualifizierungsjahr",
+        "Team"
+    ),
+    new TeamMember(
+        "Thomas Kontny", 
+        "Praktikant",
+        "Team"
+    ),
+    new TeamMember(
+        "Mareike Gerloff", 
+        "Bundesfreiwilligendienst",
+        "Team"
+    ),
+    new TeamMember(
+        "Mariami Okujava", 
+        "Einstiegsqualifikationsjahr",
         "Team"
     ),
 ]

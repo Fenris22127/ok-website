@@ -37,7 +37,7 @@ var programItems = []
  * The list containing all program points.
  */
 const items = [
-    new ProgramItem(
+/*    new ProgramItem(
         "Meeting", 
         "30", 
         [
@@ -46,20 +46,146 @@ const items = [
             "2025-06-25 - 12:00",
             "2025-06-27 - 12:00",
         ]
-    ),
+    ),*/
     new ProgramItem(
-        "Workshop", 
-        "60", 
+        "ANMOD - Aktuelles in OKWR", 
+        "5", 
         [
-            "2025-06-24 - 9:00", 
-            "2025-06-26 - 10:00"
+            "2026-03-16 - 6:55",
+            "2026-03-16 - 21:55",
+            "2026-03-17 - 6:55",
         ]
     ),
     new ProgramItem(
-        "Event", 
-        "120", 
+        "ANMOD - CampusTV in OKWR", 
+        "30", 
         [
-            "2025-06-23 - 18:00"
+            "2026-03-16 - 9:55",
+        ]
+    ),
+    new ProgramItem(
+        "ANMOD - Globales in OKWR", 
+        "30", 
+        [
+            "2026-03-16 - 15:55",
+        ]
+    ),
+    new ProgramItem(
+        "ANMOD - Regionales in OKWR", 
+        "30", 
+        [
+            "2026-03-16 - 18:55",
+        ]
+    ),
+    new ProgramItem(
+        "ANMOD - Jugendprogramm in OKWR", 
+        "30", 
+        [
+            "2026-03-17 - 0:55",
+        ]
+    ),
+    new ProgramItem(
+        "Break - Das Infomagazin", 
+        "30", 
+        [
+            "2026-03-16 - 7:00",
+            "2026-03-16 - 22:00",
+            "2026-03-17 - 7:00",
+        ]
+    ),
+    new ProgramItem(
+        "Break - Das Infomagazin WDH", 
+        "30", 
+        [
+            "2026-03-16 - 9:00",
+            "2026-03-17 - 0:00",
+            "2026-03-17 - 9:00",
+        ]
+    ),
+    new ProgramItem(
+        "Deine Heimat Hüttenrode", 
+        "60", 
+        [
+            "2026-03-16 - 8:00",
+            "2026-03-16 - 23:00",
+            "2026-03-17 - 8:00",
+        ]
+    ),
+    new ProgramItem(
+        "Campus TV", 
+        "180", 
+        [
+            "2026-03-16 - 10:00",
+        ]
+    ),
+    new ProgramItem(
+        "Karneval 2026 Teil 4", 
+        "80", 
+        [
+            "2026-03-16 - 12:55",
+        ]
+    ),
+    new ProgramItem(
+        "2. FBL Herren - Red Devils Wernigerode vs. ESV Ingolstadt Schanzer Ducks", 
+        "95", 
+        [
+            "2026-03-16 - 14:20",
+        ]
+    ),
+    new ProgramItem(
+        "In kleiner Runde - Der Medienpodcast", 
+        "60", 
+        [
+            "2026-03-16 - 16:00",
+        ]
+    ),
+    new ProgramItem(
+        "Dachboden Revue", 
+        "60", 
+        [
+            "2026-03-16 - 17:00",
+        ]
+    ),
+    new ProgramItem(
+        "HomeZone", 
+        "30", 
+        [
+            "2026-03-16 - 18:00",
+        ]
+    ),
+    new ProgramItem(
+        "Sucht in der digitalen Welt - Teil 1 Paul", 
+        "76", 
+        [
+            "2026-03-16 - 19:00",
+        ]
+    ),
+    new ProgramItem(
+        "Spinnstube - Lokal-Helden-März Ausgabe", 
+        "99", 
+        [
+            "2026-03-16 - 20:16",
+        ]
+    ),
+    new ProgramItem(
+        "BRaVE - Magazin - März Ausgabe 2026", 
+        "60", 
+        [
+            "2026-03-17 - 1:00",
+        ]
+    ),
+    new ProgramItem(
+        "Go Queer", 
+        "30", 
+        [
+            "2026-03-17 - 2:30",
+        ]
+    ),
+    new ProgramItem(
+        "Jugendstil", 
+        "30", 
+        [
+            "2026-03-17 - 3:00",
         ]
     ),
 ]
