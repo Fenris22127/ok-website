@@ -36,10 +36,10 @@ function loadBoard() {
                 ? imgPath
                 : "../content/img/team/person_placeholder.svg";
             img.alt = checkText(member.name);
-            if(member.group != "Vorstand"){
-                personDiv.appendChild(img);
-            }
-            
+            personDiv.appendChild(img);
+
+            img.alt = checkText(member.name);
+            personDiv.appendChild(img);
     
             var name = document.createElement("h3");
             name.innerHTML = checkText(member.name);
@@ -51,7 +51,6 @@ function loadBoard() {
             personDiv.appendChild(name);
             personDiv.appendChild(role);
             container.appendChild(personDiv);
-
         });
     });
 }

@@ -20,31 +20,28 @@ class News {
  * @type {News[]}
  */
 const news = [
-
     new News(
-        "Bürgermedienpreis Sachsen-Anhalt 2026", 
-        "07.03.2026", 
-        "Die Medienanstalt Sachsen-Anhalt und Staatskanzlei und Ministerium für Kultur zeichnen mit dem Bürgermedienpreis Sachsen-Anhalt auch im Jahr 2026 wieder herausragende Fernseh- und Hörfunkproduktionen aus, die in den Offenen Kanälen und Nichtkommerziellen Lokalradios entstanden sind. Nichtkommerzielle Produzenten, die in Bürgermedien in Sachsen-Anhalt aktiv sind, haben bis zum 3. Juni 2026, 12.00 Uhr die Möglichkeit, eigene Medienbeiträge für den Bürgermedienpreis Sachsen-Anhalt 2026 einzureichen. Die Wettbewerbsbeiträge müssen im Zeitraum zwischen Juni 2024 und Juni 2026 erstmals in den Offenen Kanälen und Nichtkommerziellen Lokalradios Sachsen-Anhalt ausgestrahlt worden sein, in deutscher oder englischer Sprache verfasst sein und dürfen eine Gesamtlänge von 20 Minuten nicht überschreiten.",
-        "Medienpreis"
+        "13. Internationales Johannes-Brahms-Chorfestival", 
+        "02.07.2025", 
+        "Vom 2. bis 6. Juli 2025 werden festliche Konzerte, spannende Wettbewerbe und internationale Chor-Vielfalt präsentiert.", 
+        "Chorfestival"
     ),
     new News(
-        "Lokal.Offen.Gemeinsam.", 
-        "26.02.2026", 
-        "Lokal Medial ist eine nicht-kommerzielle Videoplattform, betrieben von den 7 Offenen Kanälen aus Sachsen-Anhalt. Frei von Werbung, Tracking und Algorithmen – 100% gemeinwohlorientiert.", 
-        "Lokalmedia"
+        "Wernigeröder Schlossfestspiele 2025", 
+        "26.07.2025", 
+        "Junge, hochtalentierte Sänger am Anfang ihrer Karriere und das Philharmonische Kammerorchester Wernigerode unter der musikalischen Leitung von MD Christian Fitzner gestalten ein vielfältiges Sommervergnügen in der unverwechselbaren Atmosphäre von Schloß Wernigerode.", 
+        "Schlossfestspiele"
     ),
     new News(
-        "Tag der Vereine", 
-        "14.06.2026", 
-        "Der Tag der Vereine in Wernigerode findet am Sonntag, den 14. Juni 2026, im Bürger- und Miniaturenpark statt. Von 11 bis 17 Uhr präsentieren sich zahlreiche lokale Vereine aus den Bereichen Sport, Kultur und Soziales. Die Veranstaltung bietet ein abwechslungsreiches Bühnenprogramm und Möglichkeiten zur Mitgliederwerbung", 
-        "TdV"
-    ),
-    new News(
-        "3. Arschbombemmeisterschaft", 
-        "10.07.2026", 
-       "Am Freitag dem 10. Juli heißt es „Bauchklatscher ade, Arschbombe olé!“. Das Waldhofbad Wernigerode lädt erneut zu einem besonders spaßigen Wasservergnügen ein – der 3. Arschbombenmeisterschaft in Wernigerode!", 
+        "2. Arschbombenmeisterschaft", 
+        "08.08.2025", 
+        "Am Freitag, 8. August, heißt es von 13 bis 17 Uhr „Bauchklatscher ade, Arschbombe olé!“. Das Waldhofbad Wernigerode lädt erneut zu einem besonders spaßigen Wasservergnügen ein – der 2. Arschbombenmeisterschaft in Wernigerode!", 
         "Arschbombenmeisterschaft"
     ),
-
-     
+    new News(
+        "CSD Magdeburg", 
+        "23.08.2025", 
+        "Neben den Eröffnungsreden unserer Schirmpersonen, sowie der Vorstellung unterstützender Parteien und der LSBTIQ*- Organisationen werden wir euch verschiedenste Künstler*innen Präsentiert.",
+        "CSD-Magdeburg"
+    ),
 ]

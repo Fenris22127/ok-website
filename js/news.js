@@ -22,8 +22,7 @@ document.body.onload = function() {loadNews()};
  */
 function loadNews() {
     var newsContainer = document.getElementById("newsContainer");
-    // var newsSorted = news.slice().sort((a, b) => parseGermanDate(a.date) - parseGermanDate(b.date)); //älteste News zuerst
-    var newsSorted = news.slice().sort((a, b) => parseGermanDate(a.date)); //neueste News zuerst
+    var newsSorted = news.slice().sort((a, b) => parseGermanDate(a.date) - parseGermanDate(b.date));
     var newsItems = [];
 
     // Schritt 1: Erzeuge alle News-Container synchron und füge sie dem DOM hinzu

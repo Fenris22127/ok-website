@@ -47,23 +47,12 @@ function loadProjects() {
                 linkContainer.className = "link";
                 var more = document.createElement("p");
                 more.className = "small";
-                more.innerHTML = "Alle Informationen zu diesem Projekt findest du unter:";
+                more.innerHTML = "Alle Informationen zu diesem Projekt finden Sie unter:";
                 var link = document.createElement("a");
                 link.setAttribute("href", checkLink(projectsContent[i].link));
                 link.setAttribute("target", "_blank"); // Open link in new tab
                 link.setAttribute("rel", "noopener noreferrer"); // Security measure for new tab
-                //link.innerHTML = checkText(projectsContent[i].link);
-                if (projectsContent[i].link == "https://www.youtube.com/channel/UCk5e7uah2Hi_xE_Wa58SlLw") {
-                    link.innerHTML = "Offener Kanal"
-                }else{
-                    if (projectsContent[i].link == "https://www.youtube.com/channel/UCVZYZkYlc4Ysr0eweb7dkhA") {
-                        link.innerHTML = "Brave Magazin"
-                    }else{
-                        link.innerHTML = checkText(projectsContent[i].link);
-                    }
-                }
-
-                //link.innerHTML = "Link";
+                link.innerHTML = checkText(projectsContent[i].link);
                 linkContainer.appendChild(more);
                 linkContainer.appendChild(link);
                 project.appendChild(linkContainer);
