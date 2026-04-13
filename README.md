@@ -1,3 +1,7 @@
+> [!IMPORTANT]
+> Für Updates nach dem 7. Oktober 2025 bitte den ```collab``` Branch benutzen.
+> Inhalte in dem ```collab``` Branch werden **nicht** von mir erstellt oder überprüft und dienen lediglich zur Sicherung der von Mitarbeiter*innen des Offenen Kanals überarbeiteten Webseite.
+
 # Dokumentation
 Um die Webseite aktuell zu halten, müssen die Inhalte im Ordner content aktualisiert werden. Andere Dateien dürfen zur regulären Wartung nicht verändert
 werden.
